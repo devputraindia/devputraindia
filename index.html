@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevputraIndia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+  --primary: #0a9396;
+  --text-dark: #1a1a1a;
+  --text-light: #555;
+  --bg-light: #f6fefe;
+  --section-padding: 80px 20px;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  background: white;
+  color: var(--text-dark);
+}
+
+    .full-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      max-width: 100%;
+    }
+    .hero {
+      padding: 150px 20px 100px;
+      padding-top: 160px;
+      text-align: center;
+      background: linear-gradient(135deg, #0a9396, #94d2bd);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      background: rgba(255, 255, 255, 0.25);
+      filter: blur(100px);
+      top: -80px;
+      left: -50px;
+      }
+    .hero * {
+      position: relative;
+      z-index: 0;
+    }
+    .hero h2 {
+      font-size: 50px;
+      color: #005f73;
+      max-width: 900px;
+      margin: auto;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .hero p {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #555;
+      max-width: 700px;
+      margin: 20px auto 0;
+    }
+    .hero button {
+      margin-top: 30px;
+      padding: 14px 40px;
+      background: #0a9396;
+      color: #fff;
+      border: none;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .hero button:hover {
+      background: #0b7f82;
+    }
+    .cards {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    }
+    .card h3 {
+      font-size: 24px;
+      color: #0a9396;
+      margin-bottom: 10px;
+    }
+    .card p {
+      color: #555;
+      line-height: 1.6;
+      font-size: 18px;
+    }
+    .wide {
+      background: #0a9396;
+      color: white;
+      padding: 90px 20px;
+      text-align: center;
+    }
+    .wide h2 {
+      font-size: 42px;
+      font-weight: 700;
+    }
+    .wide p {
+      font-size: 20px;
+      margin-top: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0.9;
+    }
+    .contact-section {
+     background: var(--bg-light);
+     padding: 100px 20px;
+     text-align: center;
+    }
+    .contact-container {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+.contact-section h2 {
+  font-size: 42px;
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  font-size: 18px;
+  color: var(--text-light);
+  margin-bottom: 40px;
+}
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+  transition: 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 8px rgba(10, 147, 150, 0.3);
+  outline: none;
+}
+.contact-btn {
+  width: 100%;
+  padding: 15px;
+  background: var(--primary);
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;
+  box-sizing: border-box;
+}
+.contact-btn:hover {
+  background: #086f72;
+}
+
+    footer {
+      background: #f2f2f2;
+      padding: 30px 20px;
+      text-align: center;
+      color: #666;
+      font-size: 16px;
+    }
+    .glass-nav {
+    position: fixed;
+  
+   top: 0;
+  width: 100%;
+  padding: 15px 0;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 25px rgba(0,0,0,0.05);
+  transition: 0.3s ease, padding 0.3s ease;
+  z-index: 999;
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0b4d4d;
+}
+.logo span {
+  color: #2fa58a;
+}
+.nav-links {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #003f3f;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #2fa58a;
+  transition: width 0.3s ease;
+}
+.nav-links li a:hover::after {
+  width: 100%;
+}
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #0b4d4d;
+}
+.hamburger i {
+  font-size: 30px;
+  color: #0b4d4d;
+}
+.testimonials {
+  padding: 80px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.testimonials .section-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #005f73;
+  margin-bottom: 50px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  border-left: 6px solid #0a9396;
+
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.testimonial-card.reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.8s ease;
+}
+
+.quote {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.author {
+  margin-top: 20px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #0a9396;
+}
+.footer {
+  background: #0a9396;
+  color: white;
+  padding: 50px 20px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-brand h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer-brand h3 span {
+  color: #d9fdf5;
+}
+
+.footer-brand p {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 25px;
+}
+
+.footer-social a {
+  color: white;
+  font-size: 24px;
+  transition: 0.3s ease;
+}
+
+.footer-social a:hover {
+  transform: translateY(-5px);
+  color: #e0fffb;
+}
+
+.footer-copy {
+  font-size: 14px;
+  opacity: 0.85;
+}
+  .about-section {
+  padding: 100px 20px;
+  background: #f6fefe;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text h2 {
+  font-size: 42px;
+  color: #0a9396;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.about-points {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.about-points li {
+  display: grid;
+  grid-template-columns: 24px auto;
+  gap: 10px;
+  align-items: start;
+  font-size: 17px;
+  margin-bottom: 14px;
+  color: #003f3f;
+}
+.about-points i {
+  font-size: 20px;
+  color: #0a9396;
+}
+.about-icon {
+  min-width: 38px;
+  height: 38px;
+  background: rgba(10, 147, 150, 0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #0a9396;
+  flex-shrink: 0;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  object-fit: fill;
+}
+
+.about-text,
+.testimonial-card {
+  text-align: left;
+}
+
+.faq-section {
+  padding: 100px 20px;
+  background: #ffffff;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: bold;
+  color: #0a9396;
+  margin-bottom: 10px;
+}
+
+.faq-subtext {
+  text-align: center;
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.faq-item {
+  background: #f6fefe;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  padding: 20px;
+  cursor: pointer;
+  border: 1px solid #c8f1ef;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  color: #003f3f;
+  font-weight: bold;
+}
+
+.faq-question i {
+  transition: transform 0.3s;
+  color: #0a9396;
+  font-size: 20px;
+}
+
+.faq-answer {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+  display: none;
+}
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+}
+section {
+  scroll-margin-top: 90px;
+}
+.mission-vision {
+  background: #e8fffa;
+  padding: 100px 20px;
+}
+
+.mv-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mv-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mv-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.mv-icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.mv-card h3 {
+  font-size: 30px;
+  color: #0a9396;
+  margin-bottom: 10px;
+}
+
+.mv-card p {
+  color: #003f3f;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.why-section {
+  padding: 100px 20px;
+  background: #ffffff;
+}
+
+.why-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.why-container h2 {
+  font-size: 42px;
+  color: #0a9396;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.why-subtext {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 50px;
+}
+
+.why-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.why-card {
+  background: #f5fffe;
+  padding: 35px 25px;
+  border-radius: 18px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.why-card i {
+  font-size: 42px;
+  color: #0a9396;
+  margin-bottom: 15px;
+}
+
+.why-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #003f3f;
+}
+
+.why-card p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.impact {
+  padding: 100px 20px;
+  background: #f6fefe;
+  text-align: center;
+}
+
+.impact-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.impact-title {
+  font-size: 38px;
+  color: #0a9396;
+  font-weight: 700;
+}
+
+.impact-subtext {
+  color: #444;
+  font-size: 18px;
+  margin: 10px auto 40px;
+  max-width: 600px;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.impact-box {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform .3s ease;
+}
+
+.impact-box:hover {
+  transform: translateY(-8px);
+}
+
+.impact-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.impact-number {
+  font-size: 36px;
+  font-weight: 700;
+  color: #003f3f;
+  margin-bottom: 8px;
+}
+
+.impact-label {
+  color: #555;
+  font-size: 18px;
+}
+
+.values {
+  padding: 100px 20px;
+  background: #ffffff;
+}
+
+.values-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.values-title {
+  font-size: 38px;
+  color: #0a9396;
+  font-weight: 700;
+}
+
+.values-subtext {
+  color: #444;
+  max-width: 650px;
+  margin: 10px auto 50px;
+  font-size: 18px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.value-card {
+  background: #f6fefe;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+  transition: all .3s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.value-icon {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.value-card h3 {
+  font-size: 22px;
+  color: #003f3f;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.value-card p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.stories {
+  padding: 100px 20px;
+  background: #ffffff;
+}
+
+.stories-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.stories-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #0a9396;
+  margin-bottom: 10px;
+}
+
+.stories-subtext {
+  font-size: 18px;
+  color: #444;
+  max-width: 650px;
+  margin: 0 auto 50px;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.story-card {
+  background: #f6fefe;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+.story-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.story-content {
+  padding: 22px;
+  text-align: left;
+}
+
+.story-content h3 {
+  font-size: 22px;
+  color: #003f3f;
+  margin-bottom: 10px;
+}
+
+.story-content p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+.support-btn {
+  margin-top: 20px;
+  padding: 14px 40px;
+  border-radius: 10px;
+  background: #003f3f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.support-btn:hover {
+  background: #005f5f;
+  transform: translateY(-3px);
+}
+/* Collaborator Slider Section */
+.collab-section {
+  padding: 90px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.collab-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #0a9396;
+}
+
+.collab-subtext {
+  font-size: 18px;
+  color: #444;
+  max-width: 650px;
+  margin: 10px auto 45px;
+}
+
+.collab-slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.collab-track {
+  display: flex;
+  gap: 50px;
+  animation: scroll 22s linear infinite;
+}
+
+.collab-logo {
+  min-width: 160px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s ease;
+}
+
+.collab-logo img {
+  max-height: 70px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.collab-logo:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.08);
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+} 
+@media (max-width: 600px) {
+  .hero h2,
+  .about-text h2,
+  .section-title {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+  .hero p,
+  .about-text p,
+  .wide p,
+  .card p,
+  .quote {
+    font-size: 15px;
+  }
+  section,
+  .about-section,
+  .contact-section,
+  .testimonials {
+    padding: 15px 20px;
+  }
+  .about-text,
+  .testimonial-card{
+    text-align: center;
+  }
+  .full-image {
+    max-height: 280px;
+    object-fit: fill;
+  }
+  .footer-brand h3 {
+    font-size: 26px;
+  }
+
+  .footer-social a {
+    font-size: 22px;
+  }
+  .about-points li {
+    font-size: 16px;
+    gap: 8px;
+  }
+
+  .about-text h2 {
+    font-size: 32px;
+  }
+}
+.story-img {
+    height: 180px;
+  }
+  .story-content h3 {
+    font-size: 20px;
+  }
+  .stories-title {
+    font-size: 32px;
+  }
+  {
+  .collab-title { font-size: 32px; }
+  .collab-subtext { font-size: 16px; }
+  .collab-logo { min-width: 120px; height: 70px; }
+  .collab-logo img { max-height: 55px; }
+}
+@media (max-width: 768px) {
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 72%;
+    height: 100vh;        
+    overflow-y: auto;     
+    
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 120px;
+    padding-left: 30px;
+    gap: 28px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-right: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 4px 0 12px rgba(0,0,0,0.15);
+
+    transition: left 0.36s ease-in-out;
+    z-index: 9999;
+  }
+
+  .nav-links.open {
+    left: 0;
+  }
+
+  .nav-links li a {
+    font-size: 20px;
+    color: #003935;
+    font-weight: 600;
+  }
+   .mv-card h3 {
+    font-size: 24px;
+  }
+
+  .mv-card p {
+    font-size: 16px;
+  }
+  .contact-section h2 {
+    font-size: 28px;
+  }
+
+  .contact-section p {
+    font-size: 16px;
+  }
+
+  .contact-btn {
+    font-size: 16px;
+  }
+  .about-section {
+    padding: 60px 20px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: left;
+    gap: 30px;
+  }
+
+  .about-text h2 {
+    font-size: 30px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+  }
+
+  .about-points li {
+    font-size: 16px;
+    align-items: center;
+  }
+
+  .about-icon {
+    min-width: 32px;
+    height: 32px;
+    font-size: 18px;
+  }
+  .faq-title { font-size: 32px; }
+}
+
+.hamburger {
+  display: block;
+  position: absolute;
+  top: 22px;
+  right: 25px;
+  z-index: 10000;
+}
+      .hero {
+        padding: 120px 20px 70px;
+      }
+      .hero h2 {
+        font-size: 32px;
+      }
+      .hero p {
+        font-size: 16px;
+      }
+      .hero button {
+        padding: 12px 28px;
+        font-size: 16px;
+      }
+
+      .card h3 {
+        font-size: 20px;
+      }
+      .card p {
+        font-size: 15px;
+      }
+      .wide h2 {
+        font-size: 30px;
+      }
+      .wide p {
+        font-size: 16px;
+      }
+      .why-container h2 {
+    font-size: 32px;
+  }
+
+  .why-card {
+    width: 100%;
+  }
+    }
+    .reveal { opacity: 0; transform: translateY(18px); 
+      transition: opacity .6s ease, transform .6s ease; 
+      will-change: opacity, transform; }
+    .reveal.show { opacity: 1; transform: none; }
+    
+    
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="glass-nav">
+      <div class="nav-container">
+    <div class="logo">Devputra<span>India</span></div>
+
+    <div class="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#crops">Special Crops</a></li>
+      <li><a href="#support">Support</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+  </header>
+  <section id="home" class="hero">
+
+    <h2>Empowering Villagers to Build Businesses & Grow Specialized Crops</h2>
+    <p>
+      DevputraIndia supports rural communities with training, resources, and agricultural guidance 
+      to help them become financially independent and future-ready.
+    </p>
+    <button>Explore Our Mission</button>
+  </section>
+  <img src="./images/farm1.png" class="full-image" >
+  <section id="about" class="about-section reveal">
+  <div class="about-container">
+    
+    <div class="about-text">
+      <h2>About DevputraIndia</h2>
+      <p>
+        DevputraIndia is a rural empowerment initiative focused on helping villagers 
+        build sustainable businesses, grow high-value crops, and access modern agricultural 
+        knowledge. Our goal is to create independent, financially strong, and future-ready communities.
+      </p>
+
+      <p>
+        We work closely with farmers, rural entrepreneurs, and village youth, providing 
+        hands-on mentorship, training, and support so they can grow, earn, and create 
+        new opportunities within their own villages.
+      </p>
+
+
+      <ul class="about-points">
+
+  <li>
+    <div class="about-icon"><i class="fas fa-leaf"></i></div>
+    Supporting villagers in growing high-value organic crops.
+  </li>
+
+  <li>
+    <div class="about-icon"><i class="fas fa-handshake"></i></div>
+    Building a bridge between local producers and global buyers.
+  </li>
+
+  <li>
+    <div class="about-icon"><i class="fas fa-box-open"></i></div>
+    Helping villagers sell their handmade products worldwide.
+  </li>
+
+  <li>
+    <div class="about-icon"><i class="fas fa-tractor"></i></div>
+    Providing modern farming knowledge & training.
+  </li>
+
+  <li>
+    <div class="about-icon"><i class="fas fa-lightbulb"></i></div>
+    Guiding rural entrepreneurs with business planning.
+  </li>
+
+</ul>
+
+    </div>
+
+    <div class="about-image">
+      <img src="./images/farm3.jpg" alt="About DevputraIndia">
+    </div>
+    </div>
+    </section>
+    <section class="mission-vision reveal" id="mission">
+  <div class="mv-container">
+
+    <div class="mv-card">
+      <div class="mv-icon"><i class="fas fa-bullseye"></i></div>
+      <h3>Our Mission</h3>
+      <p>
+        To empower rural communities through digital skills, modern agriculture practices,
+        and accessible education, building a foundation of growth, dignity, and opportunity.
+      </p>
+    </div>
+
+    <div class="mv-card">
+      <div class="mv-icon"><i class="fas fa-seedling"></i></div>
+      <h3>Our Vision</h3>
+      <p>
+        To create a future where every village is self-reliant, digitally aware, and thriving,
+        ensuring no one is left behind in the journey toward development.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+  </div>
+</section>
+  <section class="cards">
+    <div class="card">
+      <h3>Business Guidance</h3>
+      <p>Step-by-step support for villagers to start and grow small sustainable businesses.</p>
+    </div>
+    <div class="card">
+      <h3>Crop Specialization</h3>
+      <p>Training to cultivate high-value crops using modern and eco-friendly agricultural methods.</p>
+    </div>
+    <div class="card">
+      <h3>Financial Support</h3>
+      <p>Connecting rural entrepreneurs with micro-loans, schemes, and government funding.</p>
+    </div>
+  </section>
+  <img src="./images/farm2.jpg" class="full-image">
+<section id="crops" class="cards reveal">
+  <h2 style="text-align:center; color:#0a9396; font-size:36px; margin-bottom:40px;">
+    Special Crops We Promote
+  </h2>
+
+  <div class="card">
+    <h3>Stevia Farming</h3>
+    <p>A natural sweetener crop that gives farmers 4x better profit than traditional sugarcane.</p>
+  </div>
+
+  <div class="card">
+    <h3>Aloe Vera Farming</h3>
+    <p>High-value medicinal plant used in cosmetics and Ayurvedic industries.</p>
+  </div>
+
+  <div class="card">
+    <h3>Dragon Fruit Farming</h3>
+    <p>A high-income exotic fruit crop becoming popular across India.</p>
+  </div>
+</section>
+<section id="support" class="wide reveal">
+  <h2>How We Support Villagers</h2>
+  <p>
+    DevputraIndia provides rural communities with training, farm guidance,
+    financial connections, business mentorship and digital awareness so they
+    can become self-dependent and future ready.
+  </p>
+  <button class="support-btn">Join to Support Program</button>
+</section>
+  <section class="wide">
+    <h2>A Future Where Every Village Thrives</h2>
+    <p>
+      Our vision is to create a strong rural ecosystem where farming, business, and community 
+      development go hand in hand.
+    </p>
+  </section>
+  <img src="./images/farm4.jpg" class="full-image">
+  <section class="why-section reveal">
+  <div class="why-container">
+    <h2>Why Choose DevputraIndia?</h2>
+    <p class="why-subtext">We empower rural communities with trusted guidance and real results.</p>
+
+    <div class="why-cards">
+      <div class="why-card">
+        <i class="fas fa-leaf"></i>
+        <h3>Expert Agricultural Support</h3>
+        <p>We guide farmers with the right methods, tools, and crop planning for long-term success.</p>
+      </div>
+
+      <div class="why-card">
+        <i class="fas fa-people-arrows"></i>
+        <h3>Community-Centered Approach</h3>
+        <p>Every decision focuses on helping villages grow financially and become more self-dependent.</p>
+      </div>
+
+      <div class="why-card">
+        <i class="fas fa-seedling"></i>
+        <h3>Future-Ready Growth</h3>
+        <p>Through training and support, we prepare villagers to embrace modern agricultural techniques.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="faq" class="faq-section">
+  <h2 class="faq-title">Frequently Asked Questions</h2>
+  <p class="faq-subtext">Find answers to the most common questions.</p>
+
+  <div class="faq-container">
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What is Devputra?</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        Devputra is a platform dedicated to supporting local talent, creativity, and meaningful growth through community-driven initiatives.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How can I participate?</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        You can participate by joining our community events, contacting us through the form, or following our updates on social media.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Is Devputra free to join?</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        Yes, Devputra is free and open for everyone who seeks learning, exploring, and sharing meaningful contributions.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Where can I connect with the team?</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        You may contact us through the website contact form or via our official social media platforms.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <section id="contact" class="contact-section reveal">
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+    <p>Have questions? Want to collaborate? We're here to help.</p>
+
+    <form class="contact-form">
+      <div class="form-group">
+        <input type="text" placeholder="Your Name" required>
+      </div>
+
+      <div class="form-group">
+        <input type="email" placeholder="Your Email" required>
+      </div>
+
+      <div class="form-group">
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="contact-btn">Send Message</button>
+      </div>
+    </form>
+  </div>
+</section>
+<section class="impact reveal">
+  <div class="impact-container">
+
+    <h2 class="impact-title">Our Impact So Far</h2>
+    <p class="impact-subtext">Real progress, real growth - empowering rural India towards a better future.</p>
+
+    <div class="impact-grid">
+
+      <div class="impact-box">
+        <div class="impact-icon"><i class="fas fa-seedling"></i></div>
+        <h3 class="impact-number" data-target="500">0+</h3>
+        <p class="impact-label">Farmers Trained</p>
+      </div>
+
+      <div class="impact-box">
+        <div class="impact-icon"><i class="fas fa-box"></i></div>
+        <h3 class="impact-number" data-target="120">0+</h3>
+        <p class="impact-label">Rural Businesses Started</p>
+      </div>
+
+      <div class="impact-box">
+        <div class="impact-icon"><i class="fas fa-home"></i></div>
+        <h3 class="impact-number" data-target="15">0+</h3>
+        <p class="impact-label">Villages Empowered</p>
+      </div>
+
+      <div class="impact-box">
+        <div class="impact-icon"><i class="fas fa-globe-asia"></i></div>
+        <h3 class="impact-number" data-target="20000">0+</h3>
+        <p class="impact-label">Lives Impacted</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section class="values reveal">
+  <div class="values-container">
+
+    <h2 class="values-title">Our Core Values</h2>
+    <p class="values-subtext">
+      The principles that guide DevputraIndia in empowering villages and transforming rural lives.
+    </p>
+
+    <div class="values-grid">
+
+      <div class="value-card">
+        <div class="value-icon"><i class="fas fa-handshake"></i></div>
+        <h3>Trust & Transparency</h3>
+        <p>We build genuine, trust-based relationships with villagers through honesty and clarity.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon"><i class="fas fa-leaf"></i></div>
+        <h3>Sustainable Growth</h3>
+        <p>We promote farming methods and businesses that protect nature and ensure long-term success.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon"><i class="fas fa-book"></i></div>
+        <h3>Knowledge for All</h3>
+        <p>We believe learning should be accessible to every villager, regardless of age or background.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon"><i class="fas fa-tractor"></i></div>
+        <h3>Future-Ready Skills</h3>
+        <p>We prepare rural communities with modern tools, digital literacy, and growth-focused training.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="stories reveal" id="stories">
+  <div class="stories-container">
+
+    <h2 class="stories-title">Success Stories</h2>
+    <p class="stories-subtext">
+      Real journeys of farmers and rural entrepreneurs transformed through DevputraIndia.
+    </p>
+
+    <div class="stories-grid">
+
+      <div class="story-card">
+        <img src="./images/story1.jpg" alt="Farmer Success" class="story-img">
+        <div class="story-content">
+          <h3>Gurmeet Singh - Punjab</h3>
+          <p>
+            Gurmeet shifted from traditional wheat farming to Stevia cultivation.  
+            His income increased by 40% in the first year, thanks to DevputraIndia's crop guidance.
+          </p>
+        </div>
+      </div>
+
+      <div class="story-card">
+        <img src="./images/story2.jpeg" alt="Women Entrepreneur" class="story-img">
+        <div class="story-content">
+          <h3>Kavita Devi - Haryana</h3>
+          <p>
+            Kavita started a small dairy and handmade products unit with our training.  
+            Today she employs 5 local women and sells her products across districts.
+          </p>
+        </div>
+      </div>
+
+      <div class="story-card">
+        <img src="./images/story3.jpg" alt="Farmer Training" class="story-img">
+        <div class="story-content">
+          <h3>Rakesh Kumar - Uttar Pradesh</h3>
+          <p>
+            After learning modern techniques, Rakesh adopted turmeric and aloe vera farming,  
+            boosting profits and reducing farming costs significantly.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+  </div>
+</section>
+  <section class="testimonials" id="testimonials">
+  <h2 class="section-title">What Our Farmers Say</h2>
+
+  <div class="testimonial-grid">
+    
+    <div class="testimonial-card reveal">
+      <p class="quote">"Devputra India helped me improve crop quality and increase income!"</p>
+      <p class="author">- Ramesh Kumar</p>
+    </div>
+
+    <div class="testimonial-card reveal">
+      <p class="quote">"Their support team guided me throughout my farming process."</p>
+      <p class="author">- Sunita Kumari</p>
+    </div>
+
+    <div class="testimonial-card reveal">
+      <p class="quote">"A trustworthy platform for farmers. Highly recommended."</p>
+      <p class="author">- Harpreet Singh</p>
+    </div>
+
+  </div>
+</section>
+<section class="collab-section reveal" id="collaborators">
+  <h2 class="collab-title">Our Collaborators</h2>
+  <p class="collab-subtext">
+    DevputraIndia proudly partners with organizations that support rural development,
+    sustainable agriculture, and community empowerment.
+  </p>
+  <div class="collab-slider">
+    <div class="collab-track">
+      <div class="collab-logo"><img src="./images/partner1.png" alt="Partner Logo"></div>
+      <div class="collab-logo"><img src="./images/partner2.png" alt="Partner Logo"></div>
+      <div class="collab-logo"><img src="./images/partner3.png" alt="Partner Logo"></div>
+      <div class="collab-logo"><img src="./images/partner4.png" alt="Partner Logo"></div>
+      <div class="collab-logo"><img src="./images/partner5.png" alt="Partner Logo"></div>
+      <div class="collab-logo"><img src="./images/partner1.png" alt="Partner Logo"></div>
+      <div class="collab-logo"><img src="./images/partner2.png" alt="Partner Logo"></div>
+      <div class="collab-logo"><img src="./images/partner3.png" alt="Partner Logo"></div>
+      <div class="collab-logo"><img src="./images/partner4.png" alt="Partner Logo"></div>
+      <div class="collab-logo"><img src="./images/partner5.png" alt="Partner Logo"></div>
+    </div>
+  </div>
+</section>
+  <footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <h3>Devputra<span>India</span></h3>
+      <p>Empowering villages through business, agriculture & community growth.</p>
+    </div>
+
+    <div class="footer-social">
+
+  <a href="https://www.facebook.com/devputraindia/" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook"></i>
+  </a>
+  <a href="https://www.instagram.com/devputraindia/" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://twitter.com/Devputraindia/" target="_blank" aria-label="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+
+  <a href="https://youtube.com/@Devputraindia" target="_blank" aria-label="YouTube">
+    <i class="fab fa-youtube"></i>
+  </a>
+
+</div>
+    <p class="footer-copy">© 2025 DevputraIndia — Empowering Rural India</p>
+  </div>
+</footer>
+  <script>
+const reveals = document.querySelectorAll(".reveal");
+function revealOnScroll() {
+  reveals.forEach(el => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 150) {
+      el.classList.add("show");
+    }
+  });
+}
+window.addEventListener("scroll", revealOnScroll);
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector("#navLinks");
+
+hamburger.addEventListener("click", (e) => {
+  e.stopPropagation();
+  navMenu.classList.toggle("open");
+});
+document.addEventListener("click", (e) => {
+  if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+    navMenu.classList.remove("open");
+  }
+});
+
+document.querySelectorAll("#navLinks a").forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("open");
+  });
+});
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+  item.addEventListener("click", () => {
+    item.classList.toggle("active");
+  });
+});
+
+const counters = document.querySelectorAll(".impact-number");
+let started = false;
+
+function startCounter() {
+  if (!started && window.scrollY + window.innerHeight >= document.querySelector(".impact").offsetTop) {
+    counters.forEach(counter => {
+      let target = +counter.dataset.target;
+      let count = 0;
+      let speed = target / 200;
+
+      let update = setInterval(() => {
+        count += speed;
+        if (count >= target) {
+          count = target;
+          clearInterval(update);
+        }
+        counter.textContent = Math.floor(count) + "+";
+      }, 10);
+    });
+    started = true;
+  }
+}
+window.addEventListener("scroll", startCounter);
+</script>
+</script>
+</body>
+</html>

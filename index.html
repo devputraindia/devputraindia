@@ -543,7 +543,6 @@ section {
   justify-content: center;
   flex-wrap: wrap;
 }
-
 .mv-card {
   background: #ffffff;
   border-radius: 16px;
@@ -842,7 +841,6 @@ section {
   background: #005f5f;
   transform: translateY(-3px);
 }
-/* Collaborator Slider Section */
 .collab-section {
   padding: 90px 20px;
   background: #ffffff;
@@ -854,19 +852,16 @@ section {
   font-weight: 700;
   color: #0a9396;
 }
-
 .collab-subtext {
   font-size: 18px;
   color: #444;
   max-width: 650px;
   margin: 10px auto 45px;
 }
-
 .collab-slider {
   overflow: hidden;
   width: 100%;
 }
-
 .collab-track {
   display: flex;
   gap: 50px;
@@ -900,6 +895,119 @@ section {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 } 
+.community {
+  padding: 100px 20px;
+  background: #ffffff;
+}
+
+.community-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.community-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #0a9396;
+}
+.community-subtext {
+  font-size: 18px;
+  color: #555;
+  max-width: 650px;
+  margin: 10px auto 50px;
+}
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+.community-card {
+  background: #f6fefe;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  text-align: center;
+}
+.community-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+.community-icon {
+  font-size: 42px;
+  color: #0a9396;
+  margin-bottom: 15px;
+}
+.community-card h3 {
+  font-size: 22px;
+  color: #003f3f;
+  margin-bottom: 10px;
+}
+
+.community-card p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+/* PRESS / MEDIA SECTION */
+.press {
+  padding: 100px 20px;
+  background: #f6fefe;
+}
+
+.press-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.press-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #0a9396;
+}
+
+.press-subtext {
+  font-size: 18px;
+  color: #555;
+  max-width: 650px;
+  margin: 10px auto 50px;
+}
+
+.press-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.press-card {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  border-left: 6px solid #0a9396;
+}
+
+.press-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.press-logo {
+  width: 150px;
+  margin: 0 auto 20px;
+  display: block;
+  opacity: 0.9;
+}
+
+.press-quote {
+  font-size: 16px;
+  color: #444;
+  font-style: italic;
+  line-height: 1.6;
+}
 @media (max-width: 600px) {
   .hero h2,
   .about-text h2,
@@ -959,6 +1067,17 @@ section {
   .collab-logo { min-width: 120px; height: 70px; }
   .collab-logo img { max-height: 55px; }
 }
+{
+  .community-title { font-size: 30px; }
+  .community-subtext { font-size: 16px; }
+  .community-card p { font-size: 15px; }
+}
+ {
+  .press-title { font-size: 30px; }
+  .press-subtext { font-size: 16px; }
+  .press-quote { font-size: 15px; }
+  .press-logo { width: 120px; }
+}
 @media (max-width: 768px) {
 
   .nav-links {
@@ -968,24 +1087,19 @@ section {
     width: 72%;
     height: 100vh;        
     overflow-y: auto;     
-    
     display: flex;
     flex-direction: column;
-
     padding-top: 120px;
     padding-left: 30px;
     gap: 28px;
     background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-
     border-right: 1px solid rgba(0,0,0,0.1);
     box-shadow: 4px 0 12px rgba(0,0,0,0.15);
-
     transition: left 0.36s ease-in-out;
     z-index: 9999;
   }
-
   .nav-links.open {
     left: 0;
   }
@@ -998,14 +1112,12 @@ section {
    .mv-card h3 {
     font-size: 24px;
   }
-
   .mv-card p {
     font-size: 16px;
   }
   .contact-section h2 {
     font-size: 28px;
   }
-
   .contact-section p {
     font-size: 16px;
   }
@@ -1030,7 +1142,6 @@ section {
   .about-text p {
     font-size: 16px;
   }
-
   .about-points li {
     font-size: 16px;
     align-items: center;
@@ -1043,7 +1154,6 @@ section {
   }
   .faq-title { font-size: 32px; }
 }
-
 .hamburger {
   display: block;
   position: absolute;
@@ -1080,17 +1190,14 @@ section {
       .why-container h2 {
     font-size: 32px;
   }
-
   .why-card {
     width: 100%;
   }
-    }
     .reveal { opacity: 0; transform: translateY(18px); 
       transition: opacity .6s ease, transform .6s ease; 
       will-change: opacity, transform; }
     .reveal.show { opacity: 1; transform: none; }
-    
-    
+
   </style>
 </head>
 
@@ -1143,8 +1250,7 @@ section {
 
 
       <ul class="about-points">
-
-  <li>
+        <li>
     <div class="about-icon"><i class="fas fa-leaf"></i></div>
     Supporting villagers in growing high-value organic crops.
   </li>
@@ -1477,6 +1583,79 @@ section {
 
   </div>
 </section>
+  </div>
+</section>
+<section class="community reveal" id="community">
+  <div class="community-container">
+
+    <h2 class="community-title">Community Highlights</h2>
+    <p class="community-subtext">
+      Real progress in rural India through training, awareness, and sustainable development.
+    </p>
+
+    <div class="community-grid">
+
+      <div class="community-card">
+        <div class="community-icon"><i class="fas fa-users"></i></div>
+        <h3>Farmer Gatherings</h3>
+        <p>Regular meet-ups that bring farmers together to share knowledge and build strong networks.</p>
+      </div>
+
+      <div class="community-card">
+        <div class="community-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+        <h3>Training Workshops</h3>
+        <p>Hands-on sessions on modern farming, organic cultivation, and rural entrepreneurship.</p>
+      </div>
+
+      <div class="community-card">
+        <div class="community-icon"><i class="fas fa-female"></i></div>
+        <h3>Women Empowerment</h3>
+        <p>Encouraging rural women to lead small businesses and become independent.</p>
+      </div>
+
+      <div class="community-card">
+        <div class="community-icon"><i class="fas fa-tractor"></i></div>
+        <h3>Field Demonstrations</h3>
+        <p>Live demonstrations of modern equipment, irrigation techniques, and crop practices.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section class="press reveal" id="press">
+  <div class="press-container">
+
+    <h2 class="press-title">Featured In Media</h2>
+    <p class="press-subtext">
+      DevputraIndia’s work has been recognized by respected media platforms for transforming rural development.
+    </p>
+
+    <div class="press-grid">
+
+      <div class="press-card">
+        <img src="./images/press1.png" alt="News Logo" class="press-logo">
+        <p class="press-quote">
+          “A growing movement empowering farmers with modern knowledge and sustainable agriculture.”
+        </p>
+      </div>
+
+      <div class="press-card">
+        <img src="./images/press2.png" alt="Media Logo" class="press-logo">
+        <p class="press-quote">
+          “Rural entrepreneurship is rising in North India, and DevputraIndia is playing a major role.”
+        </p>
+      </div>
+
+      <div class="press-card">
+        <img src="./images/press3.png" alt="Online Blog" class="press-logo">
+        <p class="press-quote">
+          “A powerful platform helping villagers create new opportunities and build sustainable income.”
+        </p>
+      </div>
+
+    </div>
+
   </div>
 </section>
   <section class="testimonials" id="testimonials">

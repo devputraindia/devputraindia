@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Special Crops - Devputra Agro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .crop-hero {
+      background: linear-gradient(135deg, #0a9396, #94d2bd);
+      padding: 130px 20px 80px;
+      text-align: center;
+    }
+    .crop-hero h2 {
+      color: #003f3f;
+      font-size: 42px;
+      font-weight: 700;
+    }
+    .crop-hero p {
+      font-size: 18px;
+      max-width: 650px;
+      margin: 15px auto;
+      color: #083d3d;
+    }
+    .crops-section {
+      padding: 90px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .crops-title {
+      text-align: center;
+      font-size: 42px;
+      font-weight: 700;
+      color: #0a9396;
+      margin-bottom: 40px;
+    }
+    .crop-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 35px;
+    }
+    .crop-card {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: 0.3s ease;
+      text-align: center;
+    }
+    .crop-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+    }
+    .crop-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 18px;
+    }
+    .crop-card h3 {
+      font-size: 24px;
+      color: #003f3f;
+      margin-bottom: 10px;
+    }
+    .crop-card p {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.6;
+    }
+    @media (max-width: 600px) {
+      .crop-hero h2 { font-size: 30px; }
+      .crops-title { font-size: 32px; }
+      .crop-card h3 { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <nav class="glass-nav">
+    <div class="nav-container">
+
+      <div class="logo">Devputra<span>Agro</span></div>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="crops.html" class="active">Special Crops</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<section class="crop-hero">
+  <h2>Special Crops We Promote</h2>
+  <p>High-income, sustainable, and scientifically guided crops to uplift rural families.</p>
+</section>
+<img src="./images/farm2.jpg" class="full-image">
+<section class="crops-section">
+  <h2 class="crops-title">High-Value Crops</h2>
+
+  <div class="crop-grid">
+    <div class="crop-card">
+      <img src="./images/stevia.jpg" class="crop-img" alt="Stevia Farming">
+      <h3>Stevia Farming</h3>
+      <p>
+        A natural sweetener crop that gives farmers **4x more profit** than traditional sugarcane.
+        Low water requirement & high market demand.
+      </p>
+    </div>
+    <div class="crop-card">
+      <img src="./images/aloevera.jpg" class="crop-img" alt="Aloe Vera Farming">
+      <h3>Aloe Vera Farming</h3>
+      <p>
+        Used in cosmetics and Ayurvedic medicine.  
+        Highly profitable with low maintenance and year-round demand.
+      </p>
+    </div>
+    <div class="crop-card">
+      <img src="./images/dragonfruit.jpg" class="crop-img" alt="Dragon Fruit Farming">
+      <h3>Dragon Fruit Farming</h3>
+      <p>
+        A premium exotic fruit with excellent returns.  
+        Strong export potential and long-term sustainability.
+      </p>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h3>Devputra<span>Agro</span></h3>
+      <p>Empowering villages through business, agriculture & community growth.</p>
+    </div>
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p class="footer-copy">© 2025 Devputra Agro — All Rights Reserved</p>
+  </div>
+</footer>
+<script>
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector("#navLinks");
+
+hamburger.addEventListener("click", (e) => {
+  e.stopPropagation();
+  navMenu.classList.toggle("open");
+});
+document.addEventListener("click", (e) => {
+  if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+    navMenu.classList.remove("open");
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Press & Media - Devputra Agro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: #ffffff;
+    }
+    .press-hero {
+      padding: 140px 20px 90px;
+      text-align: center;
+      background: linear-gradient(135deg, #0a9396, #94d2bd);
+    }
+    .press-hero h2 {
+      font-size: 42px;
+      font-weight: 700;
+      color: #003f3f;
+    }
+    .press-hero p {
+      font-size: 18px;
+      color: #083d3d;
+      max-width: 700px;
+      margin: 15px auto 0;
+    }
+    .press-section {
+      padding: 90px 20px;
+      background: #f6fefe;
+    }
+    .press-container {
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+    .press-container h3 {
+      font-size: 38px;
+      font-weight: 700;
+      color: #0a9396;
+      margin-bottom: 10px;
+    }
+    .press-subtext {
+      font-size: 18px;
+      color: #444;
+      max-width: 650px;
+      margin: 0 auto 50px;
+    }
+    .press-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .press-card {
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      border-left: 6px solid #0a9396;
+      transition: 0.3s ease;
+      text-align: left;
+    }
+    .press-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    }
+    .press-logo {
+      width: 140px;
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+    .press-quote {
+      font-size: 16px;
+      color: #444;
+      font-style: italic;
+      line-height: 1.6;
+    }
+    .media-contact {
+      margin-top: 70px;
+      background: white;
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .media-contact h4 {
+      font-size: 26px;
+      color: #0a9396;
+      margin-bottom: 10px;
+    }
+    .media-contact p {
+      font-size: 16px;
+      color: #444;
+      margin-bottom: 15px;
+    }
+    .media-contact a {
+      color: #0a9396;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    @media (max-width: 600px) {
+      .press-hero h2 {
+        font-size: 30px;
+      }
+      .press-container h3 {
+        font-size: 28px;
+      }
+      .press-subtext {
+        font-size: 15px;
+      }
+      .press-card {
+        padding: 25px;
+      }
+      .media-contact h4 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <nav class="glass-nav">
+    <div class="nav-container">
+      <div class="logo">Devputra<span>Agro</span></div>
+      <div class="hamburger"><i class="fas fa-bars"></i></div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="crops.html">Special Crops</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="press.html" class="active">Press</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<section class="press-hero">
+  <h2>Press & Media Coverage</h2>
+  <p>
+    Devputra Agro has been featured by leading media platforms
+    for its contribution to rural empowerment and sustainable agriculture.
+  </p>
+</section>
+<section class="press-section">
+  <div class="press-container">
+    <h3>Featured In</h3>
+    <p class="press-subtext">
+      Stories highlighting how Devputra Agro is transforming villages across India.
+    </p>
+    <div class="press-grid">
+      <div class="press-card">
+        <img src="./images/press1.png" alt="News Media" class="press-logo">
+        <p class="press-quote">
+          “Devputra Agro is creating a new generation of farmers by combining
+          traditional wisdom with modern agricultural practices.”
+        </p>
+      </div>
+      <div class="press-card">
+        <img src="./images/press2.png" alt="Online Media" class="press-logo">
+        <p class="press-quote">
+          “A grassroots initiative that is helping rural youth become
+          entrepreneurs instead of migrating to cities.”
+        </p>
+      </div>
+      <div class="press-card">
+        <img src="./images/press3.png" alt="Business Blog" class="press-logo">
+        <p class="press-quote">
+          “Devputra Agro stands out as a sustainable model for rural
+          development and community-led growth.”
+        </p>
+      </div>
+    </div>
+    <div class="media-contact">
+      <h4>Media Enquiries</h4>
+      <p>
+        For interviews, stories, or press-related questions, please contact:
+      </p>
+      <p>
+        📧 <a href="mailto:media@devputra.org">media@devputra.org</a>
+      </p>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h3>Devputra<span>Agro</span></h3>
+      <p>Empowering villages through business, agriculture & community growth.</p>
+    </div>
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p class="footer-copy">© 2025 Devputra Agro — Empowering Rural India</p>
+  </div>
+</footer>
+<script>
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector("#navLinks");
+
+hamburger.addEventListener("click", (e) => {
+  e.stopPropagation();
+  navMenu.classList.toggle("open");
+});
+document.addEventListener("click", (e) => {
+  if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+    navMenu.classList.remove("open");
+  }
+});
+</script>
+</body>
+</html>

@@ -1,78 +1,125 @@
 <!DOCTYPE html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Devputra Agro</title>
+  <title>Contact Us - Devputra Agro</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-  <link rel="stylesheet" href="style.css">
-
   <style>
     body {
-      font-family: "Poppins", sans-serif;
       margin: 0;
+      font-family: "Poppins", sans-serif;
       background: #ffffff;
       color: #1a1a1a;
+      line-height: 1.6;
     }
-    .contact-hero {
-      padding: 140px 20px 90px;
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #eee;
+      z-index: 1000;
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
+      color: #0a9396;
+    }
+    .logo span {
+      color: #003f3f;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #003f3f;
+      font-weight: 500;
+    }
+    .hero {
+      padding: 160px 20px 80px;
       text-align: center;
       background: linear-gradient(135deg, #0a9396, #94d2bd);
     }
-    .contact-hero h2 {
-      font-size: 42px;
+    .hero h1 {
+      font-size: 44px;
       font-weight: 700;
       color: #003f3f;
     }
-    .contact-hero p {
+    .hero p {
       font-size: 18px;
-      max-width: 650px;
+      max-width: 700px;
       margin: 15px auto 0;
-      color: #083d3d;
+      color: #084b4b;
     }
     .contact-section {
-      padding: 100px 20px;
+      padding: 90px 20px;
       background: #f6fefe;
     }
     .contact-container {
-      max-width: 900px;
+      max-width: 1100px;
       margin: auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40px;
     }
-    .contact-info h3 {
-      font-size: 28px;
+    .contact-info {
+      background: white;
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    .contact-info h2 {
+      font-size: 30px;
       color: #0a9396;
       margin-bottom: 15px;
     }
     .contact-info p {
       font-size: 16px;
       color: #444;
-      line-height: 1.6;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
     .info-item {
       display: flex;
       align-items: center;
       gap: 15px;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
       font-size: 16px;
       color: #003f3f;
     }
     .info-item i {
-      font-size: 20px;
+      font-size: 22px;
       color: #0a9396;
     }
+    .info-item a {
+      color: #003f3f;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .info-item a:hover {
+      text-decoration: underline;
+    }
     .contact-form {
-      background: #ffffff;
-      padding: 35px;
+      background: white;
+      padding: 40px;
       border-radius: 18px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     }
-    .contact-form h3 {
-      font-size: 26px;
+    .contact-form h2 {
+      font-size: 30px;
       color: #0a9396;
       margin-bottom: 20px;
     }
@@ -83,25 +130,25 @@
     .form-group textarea {
       width: 100%;
       padding: 14px;
-      border-radius: 12px;
+      border-radius: 10px;
       border: 1px solid #ccc;
-      font-size: 16px;
-      box-sizing: border-box;
+      font-size: 15px;
+      font-family: inherit;
     }
     .form-group input:focus,
     .form-group textarea:focus {
       outline: none;
       border-color: #0a9396;
-      box-shadow: 0 0 8px rgba(10,147,150,0.25);
+      box-shadow: 0 0 6px rgba(10,147,150,0.3);
     }
     .contact-btn {
       width: 100%;
       padding: 15px;
       background: #0a9396;
       color: white;
-      font-size: 18px;
       border: none;
-      border-radius: 12px;
+      border-radius: 10px;
+      font-size: 16px;
       cursor: pointer;
       transition: 0.3s ease;
     }
@@ -109,106 +156,169 @@
       background: #086f72;
       transform: translateY(-2px);
     }
+    footer {
+      background: #003f3f;
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+      margin-top: 80px;
+    }
+    footer p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    .footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 25px;
+}
+.footer-social a {
+  color: white;
+  font-size: 24px;
+  transition: 0.3s ease;
+}
+.footer-social a:hover {
+  transform: translateY(-5px);
+  color: #e0fffb;
+}
+.nav-links a.active {
+  color: #0a9396;
+  font-weight: 700;
+}
+.nav-links a.active::after {
+  width: 100%;
+}
     @media (max-width: 768px) {
       .contact-container {
         grid-template-columns: 1fr;
       }
-      .contact-hero h2 {
+      .hero h1 {
         font-size: 30px;
       }
-
-      .contact-form {
-        padding: 28px;
+      .hero p {
+        font-size: 15px;
       }
     }
   </style>
 </head>
 
 <body>
-<header>
-  <nav class="glass-nav">
-    <div class="nav-container">
-      <div class="logo">Devputra<span>Agro</span></div>
-      <div class="hamburger">
-        <i class="fas fa-bars"></i>
-      </div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="crops.html">Special Crops</a></li>
-        <li><a href="support.html">Support</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-</header>
-<section class="contact-hero">
-  <h2>Get in Touch With Us</h2>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-container">
+    <div class="logo">Devputra<span>Agro</span></div>
+    <ul class="nav-links" id="navLinks">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="mission.html">Mission</a></li>
+  <li><a href="crops.html">Special Crops</a></li>
+  <li><a href="awards.html">Awards</a></li>
+  <li><a href="stories.html">Stories</a></li>
+  <li><a href="support.html">Support</a></li>
+  <li><a href="collaborators.html">Collaborators</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="press.html">Press</a></li>
+</ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Contact Devputra Agro</h1>
   <p>
-    Have questions or want to collaborate?  
-    We're here to support farmers, entrepreneurs, and rural communities.
+    Have questions, want to collaborate, or need farming guidance?  
+    Reach out — we’re here to help.
   </p>
 </section>
+
+<!-- CONTACT -->
 <section class="contact-section">
   <div class="contact-container">
+
+    <!-- INFO -->
     <div class="contact-info">
-      <h3>Contact Information</h3>
+      <h2>Get in Touch</h2>
       <p>
-        Reach out to Devputra Agro for training, agricultural guidance,
-        partnerships, or community programs.
+        Connect with Devputra Agro for crop guidance, rural business support,
+        collaborations, and training programs.
       </p>
+
+      <div class="info-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:contact@devputra.org">contact@devputra.org</a>
+      </div>
+
       <div class="info-item">
         <i class="fas fa-map-marker-alt"></i>
         <span>India (Serving Rural Communities Nationwide)</span>
       </div>
-      <div class="info-item">
-        <i class="fas fa-envelope"></i>
-        <span>contact@devputraagro.com</span>
-      </div>
     </div>
-    <form class="contact-form">
-      <h3>Send a Message</h3>
-      <div class="form-group">
-        <input type="text" placeholder="Your Name" required>
-      </div>
-      <div class="form-group">
-        <input type="email" placeholder="Your Email" required>
-      </div>
-      <div class="form-group">
-        <textarea rows="5" placeholder="Your Message" required></textarea>
-      </div>
-      <button type="submit" class="contact-btn">Send Message</button>
-    </form>
+
+    <!-- FORM -->
+    <div class="contact-form">
+      <h2>Send a Message</h2>
+      <form>
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="contact-btn">Send Message</button>
+      </form>
+    </div>
+
   </div>
 </section>
+
 <footer class="footer">
   <div class="footer-container">
+
     <div class="footer-brand">
       <h3>Devputra<span>Agro</span></h3>
       <p>Empowering villages through business, agriculture & community growth.</p>
     </div>
+
     <div class="footer-social">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
-    </div>
+
+  <a href="https://www.facebook.com/devputragro/" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook"></i>
+  </a>
+  <a href="https://www.instagram.com/devputragro/" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://twitter.com/Devputragro/" target="_blank" aria-label="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+
+  <a href="https://youtube.com/@Devputraindia" target="_blank" aria-label="YouTube">
+    <i class="fab fa-youtube"></i>
+  </a>
+
+</div>
     <p class="footer-copy">© 2025 Devputra Agro — Empowering Rural India</p>
   </div>
 </footer>
 <script>
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector("#navLinks");
+  const navLinks = document.querySelectorAll(".nav-links a");
+  const currentPage = window.location.pathname.split("/").pop();
 
-hamburger.addEventListener("click", (e) => {
-  e.stopPropagation();
-  navMenu.classList.toggle("open");
-});
-document.addEventListener("click", (e) => {
-  if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
-    navMenu.classList.remove("open");
-  }
-});
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute("href");
+
+    if (
+      linkPage === currentPage ||
+      (linkPage === "index.html" && currentPage === "")
+    ) {
+      link.classList.add("active");
+    }
+  });
 </script>
+
 </body>
 </html>

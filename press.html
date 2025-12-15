@@ -1,219 +1,293 @@
 <!DOCTYPE html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Press & Media - Devputra Agro</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link rel="stylesheet" href="style.css">
+
   <style>
-    body {
-      font-family: "Poppins", sans-serif;
-      margin: 0;
-      background: #ffffff;
+    body{
+      margin:0;
+      font-family:"Poppins",sans-serif;
+      background:#ffffff;
+      color:#1a1a1a;
+      line-height:1.6;
     }
-    .press-hero {
-      padding: 140px 20px 90px;
-      text-align: center;
-      background: linear-gradient(135deg, #0a9396, #94d2bd);
+    .nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      background:rgba(255,255,255,.95);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid #eee;
+      z-index:1000;
     }
-    .press-hero h2 {
-      font-size: 42px;
-      font-weight: 700;
-      color: #003f3f;
+    .nav-container{
+      max-width:1200px;
+      margin:auto;
+      padding:15px 20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
     }
-    .press-hero p {
-      font-size: 18px;
-      color: #083d3d;
-      max-width: 700px;
-      margin: 15px auto 0;
+    .logo{
+      font-size:26px;
+      font-weight:700;
+      color:#0a9396;
     }
-    .press-section {
-      padding: 90px 20px;
-      background: #f6fefe;
+    .logo span{ color:#003f3f; }
+    .nav-links{
+      list-style:none;
+      display:flex;
+      gap:26px;
     }
-    .press-container {
-      max-width: 1200px;
-      margin: auto;
-      text-align: center;
+    .nav-links a{
+      text-decoration:none;
+      color:#003f3f;
+      font-weight:500;
     }
-    .press-container h3 {
-      font-size: 38px;
-      font-weight: 700;
-      color: #0a9396;
-      margin-bottom: 10px;
+    .hero{
+      padding:160px 20px 90px;
+      text-align:center;
+      background:linear-gradient(135deg,#0a9396,#94d2bd);
     }
-    .press-subtext {
-      font-size: 18px;
-      color: #444;
-      max-width: 650px;
-      margin: 0 auto 50px;
+    .hero h1{
+      font-size:44px;
+      font-weight:700;
+      color:#003f3f;
     }
-    .press-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+    .hero p{
+      max-width:760px;
+      margin:15px auto 0;
+      font-size:18px;
+      color:#084b4b;
     }
-    .press-card {
-      background: white;
-      padding: 30px;
-      border-radius: 18px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-      border-left: 6px solid #0a9396;
-      transition: 0.3s ease;
-      text-align: left;
+    .press{
+      padding:90px 20px;
+      background:#f6fefe;
     }
-    .press-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    .press-container{
+      max-width:1200px;
+      margin:auto;
+      text-align:center;
     }
-    .press-logo {
-      width: 140px;
-      margin-bottom: 20px;
-      opacity: 0.9;
+    .press-title{
+      font-size:38px;
+      color:#0a9396;
+      font-weight:700;
+      margin-bottom:10px;
     }
-    .press-quote {
-      font-size: 16px;
-      color: #444;
-      font-style: italic;
-      line-height: 1.6;
+    .press-subtext{
+      font-size:18px;
+      color:#444;
+      max-width:650px;
+      margin:0 auto 50px;
     }
-    .media-contact {
-      margin-top: 70px;
-      background: white;
-      padding: 40px;
-      border-radius: 18px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
+    .press-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
     }
-    .media-contact h4 {
-      font-size: 26px;
-      color: #0a9396;
-      margin-bottom: 10px;
+    .press-card{
+      background:white;
+      padding:30px;
+      border-radius:18px;
+      box-shadow:0 6px 20px rgba(0,0,0,.08);
+      border-left:6px solid #0a9396;
+      transition:.3s;
+      text-align:left;
     }
-    .media-contact p {
-      font-size: 16px;
-      color: #444;
-      margin-bottom: 15px;
+    .press-card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 12px 30px rgba(0,0,0,.15);
     }
-    .media-contact a {
-      color: #0a9396;
-      font-weight: 600;
-      text-decoration: none;
+    .press-logo{
+      width:140px;
+      margin-bottom:18px;
     }
-    @media (max-width: 600px) {
-      .press-hero h2 {
-        font-size: 30px;
+    .press-card h3{
+      font-size:20px;
+      color:#003f3f;
+      margin-bottom:10px;
+    }
+    .press-card p{
+      font-size:15px;
+      color:#555;
+      font-style:italic;
+      line-height:1.6;
+    }
+    .press-date{
+      margin-top:12px;
+      font-size:13px;
+      color:#777;
+    }
+    footer{
+      background:#003f3f;
+      color:white;
+      text-align:center;
+      padding:35px 20px;
+      margin-top:80px;
+    }
+    footer p{
+      font-size:14px;
+      opacity:.9;
+    }
+    .footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 25px;
+}
+.footer-social a {
+  color: white;
+  font-size: 24px;
+  transition: 0.3s ease;
+}
+.footer-social a:hover {
+  transform: translateY(-5px);
+  color: #e0fffb;
+}
+.nav-links a.active {
+  color: #0a9396;
+  font-weight: 700;
+}
+.nav-links a.active::after {
+  width: 100%;
+}
+    @media(max-width:768px){
+      .hero h1{
+        font-size:30px;
       }
-      .press-container h3 {
-        font-size: 28px;
+      .hero p{
+        font-size:15px;
       }
-      .press-subtext {
-        font-size: 15px;
+      .press-title{
+        font-size:28px;
       }
-      .press-card {
-        padding: 25px;
-      }
-      .media-contact h4 {
-        font-size: 22px;
+      .press-subtext{
+        font-size:15px;
       }
     }
   </style>
 </head>
 
 <body>
-<header>
-  <nav class="glass-nav">
-    <div class="nav-container">
-      <div class="logo">Devputra<span>Agro</span></div>
-      <div class="hamburger"><i class="fas fa-bars"></i></div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="crops.html">Special Crops</a></li>
-        <li><a href="support.html">Support</a></li>
-        <li><a href="press.html" class="active">Press</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-</header>
-<section class="press-hero">
-  <h2>Press & Media Coverage</h2>
+
+<nav class="nav">
+  <div class="nav-container">
+    <div class="logo">Devputra<span>Agro</span></div>
+    <ul class="nav-links" id="navLinks">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="mission.html">Mission</a></li>
+  <li><a href="crops.html">Special Crops</a></li>
+  <li><a href="awards.html">Awards</a></li>
+  <li><a href="stories.html">Stories</a></li>
+  <li><a href="support.html">Support</a></li>
+  <li><a href="collaborators.html">Collaborators</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="press.html">Press</a></li>
+</ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Press & Media</h1>
   <p>
-    Devputra Agro has been featured by leading media platforms
-    for its contribution to rural empowerment and sustainable agriculture.
+    Devputra Agro’s journey and impact have been recognized by leading media platforms
+    for transforming rural livelihoods and agriculture.
   </p>
 </section>
-<section class="press-section">
+
+<section class="press">
   <div class="press-container">
-    <h3>Featured In</h3>
+
+    <h2 class="press-title">Featured In Media</h2>
     <p class="press-subtext">
-      Stories highlighting how Devputra Agro is transforming villages across India.
+      Stories highlighting our work in empowering farmers, villages, and rural entrepreneurs.
     </p>
+
     <div class="press-grid">
+
       <div class="press-card">
-        <img src="./images/press1.png" alt="News Media" class="press-logo">
-        <p class="press-quote">
-          “Devputra Agro is creating a new generation of farmers by combining
-          traditional wisdom with modern agricultural practices.”
+        <img src="./images/press1.png" alt="Media Logo" class="press-logo">
+        <h3>Empowering Farmers Through Innovation</h3>
+        <p>
+          “Devputra Agro is creating a strong rural ecosystem by combining traditional
+          farming wisdom with modern agricultural practices.”
         </p>
+        <div class="press-date">– Featured in Rural India Times</div>
       </div>
+
       <div class="press-card">
-        <img src="./images/press2.png" alt="Online Media" class="press-logo">
-        <p class="press-quote">
-          “A grassroots initiative that is helping rural youth become
-          entrepreneurs instead of migrating to cities.”
+        <img src="./images/press2.png" alt="News Logo" class="press-logo">
+        <h3>Building Sustainable Village Economies</h3>
+        <p>
+          “By focusing on high-value crops and entrepreneurship, Devputra Agro is helping
+          farmers increase income and reduce migration.”
         </p>
+        <div class="press-date">– Agriculture Today</div>
       </div>
+
       <div class="press-card">
-        <img src="./images/press3.png" alt="Business Blog" class="press-logo">
-        <p class="press-quote">
-          “Devputra Agro stands out as a sustainable model for rural
-          development and community-led growth.”
+        <img src="./images/press3.png" alt="Online Media" class="press-logo">
+        <h3>A Model for Rural Development</h3>
+        <p>
+          “Devputra Agro stands as a model initiative for sustainable farming, training,
+          and community-driven growth.”
         </p>
+        <div class="press-date">– Digital Bharat Blog</div>
       </div>
+
     </div>
-    <div class="media-contact">
-      <h4>Media Enquiries</h4>
-      <p>
-        For interviews, stories, or press-related questions, please contact:
-      </p>
-      <p>
-        📧 <a href="mailto:media@devputra.org">media@devputra.org</a>
-      </p>
-    </div>
+
   </div>
 </section>
+
 <footer class="footer">
   <div class="footer-container">
+
     <div class="footer-brand">
       <h3>Devputra<span>Agro</span></h3>
       <p>Empowering villages through business, agriculture & community growth.</p>
     </div>
+
     <div class="footer-social">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
-    </div>
+
+  <a href="https://www.facebook.com/devputragro/" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook"></i>
+  </a>
+  <a href="https://www.instagram.com/devputragro/" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://twitter.com/Devputragro/" target="_blank" aria-label="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+
+  <a href="https://youtube.com/@Devputraindia" target="_blank" aria-label="YouTube">
+    <i class="fab fa-youtube"></i>
+  </a>
+
+</div>
     <p class="footer-copy">© 2025 Devputra Agro — Empowering Rural India</p>
   </div>
 </footer>
 <script>
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector("#navLinks");
+  const navLinks = document.querySelectorAll(".nav-links a");
+  const currentPage = window.location.pathname.split("/").pop();
 
-hamburger.addEventListener("click", (e) => {
-  e.stopPropagation();
-  navMenu.classList.toggle("open");
-});
-document.addEventListener("click", (e) => {
-  if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
-    navMenu.classList.remove("open");
-  }
-});
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute("href");
+
+    if (
+      linkPage === currentPage ||
+      (linkPage === "index.html" && currentPage === "")
+    ) {
+      link.classList.add("active");
+    }
+  });
 </script>
+
 </body>
 </html>

@@ -6,6 +6,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
   <style>
     :root {
   --primary: #0a9396;
@@ -950,7 +953,6 @@ section {
   color: #555;
   line-height: 1.6;
 }
-/* PRESS / MEDIA SECTION */
 .press {
   padding: 100px 20px;
   background: #f6fefe;
@@ -1059,6 +1061,14 @@ section {
   font-size: 16px;
   color: #444;
   line-height: 1.6;
+}
+.nav-links a.active {
+  color: #0a9396;
+  font-weight: 700;
+}
+
+.nav-links a.active::after {
+  width: 100%;
 }
 @media (max-width: 600px) {
   .hero h2,
@@ -1275,12 +1285,17 @@ section {
     </div>
 
     <ul class="nav-links" id="navLinks">
-      <li><a href="#index.html">Home</a></li>
-      <li><a href="#about.html">About</a></li>
-      <li><a href="#crops.html">Special Crops</a></li>
-      <li><a href="#support.html">Support</a></li>
-      <li><a href="#contact.html">Contact</a></li>
-    </ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="mission.html">Mission</a></li>
+  <li><a href="crops.html">Special Crops</a></li>
+  <li><a href="awards.html">Awards</a></li>
+  <li><a href="stories.html">Stories</a></li>
+  <li><a href="support.html">Support</a></li>
+  <li><a href="collaborators.html">Collaborators</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="press.html">Press</a></li>
+</ul>
   </div>
 </nav>
   </header>
@@ -1884,6 +1899,19 @@ function startCounter() {
   }
 }
 window.addEventListener("scroll", startCounter);
+const navLinks = document.querySelectorAll(".nav-links a");
+  const currentPage = window.location.pathname.split("/").pop();
+
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute("href");
+
+    if (
+      linkPage === currentPage ||
+      (linkPage === "index.html" && currentPage === "")
+    ) {
+      link.classList.add("active");
+    }
+  });
 </script>
 </script>
 </body>

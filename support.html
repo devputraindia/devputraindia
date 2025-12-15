@@ -1,60 +1,95 @@
 <!DOCTYPE html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support - Devputra Agro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Villagers - Devputra Agro</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-  <link rel="stylesheet" href="style.css">
-
   <style>
-    .support-hero {
-      background: linear-gradient(135deg, #0a9396, #94d2bd);
-      padding: 130px 20px 90px;
-      text-align: center;
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.6;
     }
-    .support-hero h2 {
-      color: #003f3f;
-      font-size: 42px;
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #eee;
+      z-index: 1000;
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 26px;
       font-weight: 700;
+      color: #0a9396;
+    }
+    .logo span {
+      color: #003f3f;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #003f3f;
+      font-weight: 500;
+    }
+    .support-hero {
+      padding: 160px 20px 90px;
+      text-align: center;
+      background: linear-gradient(135deg, #0a9396, #94d2bd);
+    }
+    .support-hero h1 {
+      font-size: 44px;
+      font-weight: 700;
+      color: #003f3f;
     }
     .support-hero p {
       font-size: 18px;
-      color: #083d3d;
-      max-width: 650px;
-      margin: 15px auto;
+      max-width: 720px;
+      margin: 15px auto 0;
+      color: #084b4b;
     }
-    .support-section {
+    .section {
       padding: 90px 20px;
+    }
+    .container {
       max-width: 1200px;
       margin: auto;
     }
-    .support-title {
-      font-size: 42px;
-      color: #0a9396;
-      text-align: center;
-      font-weight: 700;
-      margin-bottom: 40px;
-    }
     .support-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 30px;
     }
     .support-card {
-      background: #ffffff;
-      padding: 30px;
+      background: #f6fefe;
+      padding: 35px 30px;
       border-radius: 18px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      text-align: center;
       transition: 0.3s ease;
+      text-align: center;
     }
     .support-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 12px 28px rgba(0,0,0,0.12);
     }
-    .support-icon {
+    .support-card i {
       font-size: 44px;
       color: #0a9396;
       margin-bottom: 15px;
@@ -67,195 +102,248 @@
     .support-card p {
       font-size: 16px;
       color: #444;
-      line-height: 1.6;
     }
-    .steps-section {
-      padding: 90px 20px;
-      background: #f6fefe;
+    .help {
+      margin-top: 80px;
+      background: #ffffff;
+      padding: 70px 30px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     }
-    .steps-title {
+    .help h2 {
       text-align: center;
-      font-size: 38px;
+      font-size: 36px;
       color: #0a9396;
-      font-weight: 700;
       margin-bottom: 40px;
     }
-    .steps-grid {
-      max-width: 1000px;
-      margin: auto;
+    .help-list {
       display: grid;
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
     }
-    .step-box {
-      background: #ffffff;
-      padding: 30px;
+    .help-item {
+      padding: 25px;
+      background: #f6fefe;
       border-radius: 16px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-      border-left: 6px solid #0a9396;
-      transition: 0.3s ease;
     }
-    .step-box:hover {
-      transform: translateY(-8px);
-    }
-    .step-number {
-      font-size: 30px;
-      color: #0a9396;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    .step-box h3 {
-      font-size: 22px;
+    .help-item h4 {
       color: #003f3f;
       margin-bottom: 8px;
     }
-    .step-box p {
-      font-size: 16px;
-      color: #444;
+    .help-item p {
+      font-size: 15px;
+      color: #555;
     }
-    .support-cta {
-      padding: 80px 20px;
+    .cta {
+      margin-top: 80px;
+      padding: 70px 30px;
+      background: #0a9396;
+      color: white;
       text-align: center;
+      border-radius: 20px;
     }
-    .support-cta button {
-      padding: 16px 45px;
-      font-size: 18px;
+    .cta h3 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    .cta p {
+      font-size: 16px;
+      max-width: 600px;
+      margin: auto;
+      opacity: 0.95;
+    }
+    .cta a {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 40px;
       background: #003f3f;
       color: white;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
       transition: 0.3s ease;
     }
-    .support-cta button:hover {
+    .cta a:hover {
       background: #005f5f;
       transform: translateY(-3px);
     }
+    footer {
+      background: #003f3f;
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+      margin-top: 80px;
+    }
+    footer p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    .footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 25px;
+}
+.footer-social a {
+  color: white;
+  font-size: 24px;
+  transition: 0.3s ease;
+}
+.footer-social a:hover {
+  transform: translateY(-5px);
+  color: #e0fffb;
+}
+.nav-links a.active {
+  color: #0a9396;
+  font-weight: 700;
+}
+.nav-links a.active::after {
+  width: 100%;
+}
     @media (max-width: 600px) {
-      .support-hero h2 { font-size: 30px; }
-      .support-title { font-size: 30px; }
-      .steps-title { font-size: 28px; }
-      .support-card h3 { font-size: 20px; }
-      .step-box h3 { font-size: 20px; }
+      .support-hero h1 {
+        font-size: 30px;
+      }
+      .support-hero p {
+        font-size: 15px;
+      }
+      .help h2 {
+        font-size: 28px;
+      }
     }
   </style>
 </head>
 
 <body>
-<header>
-  <nav class="glass-nav">
-    <div class="nav-container">
-
-      <div class="logo">Devputra<span>Agro</span></div>
-
-      <div class="hamburger"><i class="fas fa-bars"></i></div>
-
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="crops.html">Special Crops</a></li>
-        <li><a href="support.html" class="active">Support</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-
-    </div>
-  </nav>
-</header>
+<nav class="nav">
+  <div class="nav-container">
+    <div class="logo">Devputra<span>Agro</span></div>
+    <ul class="nav-links" id="navLinks">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="mission.html">Mission</a></li>
+  <li><a href="crops.html">Special Crops</a></li>
+  <li><a href="awards.html">Awards</a></li>
+  <li><a href="stories.html">Stories</a></li>
+  <li><a href="support.html">Support</a></li>
+  <li><a href="collaborators.html">Collaborators</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="press.html">Press</a></li>
+</ul>
+  </div>
+</nav>
 
 <section class="support-hero">
-  <h2>How We Support Villagers</h2>
+  <h1>Support Rural Communities</h1>
   <p>
-    Devputra Agro provides farmers and rural entrepreneurs with knowledge, training, financial guidance, and modern tools.
+    Your support helps farmers, women, and village youth gain access to
+    knowledge, training, and sustainable income opportunities.
   </p>
 </section>
 
-<img src="./images/farm1.png" class="full-image">
-<section class="support-section">
-  <h2 class="support-title">What We Provide</h2>
-  <div class="support-grid">
-    <div class="support-card">
-      <div class="support-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-      <h3>Training Programs</h3>
-      <p>We train villagers in modern farming techniques, organic cultivation, and crop planning.</p>
-    </div>
-    <div class="support-card">
-      <div class="support-icon"><i class="fas fa-tractor"></i></div>
-      <h3>Farm Guidance</h3>
-      <p>Experts provide hands-on field support to help farmers adopt the best practices.</p>
-    </div>
-    <div class="support-card">
-      <div class="support-icon"><i class="fas fa-hand-holding-usd"></i></div>
-      <h3>Financial Support</h3>
-      <p>We help farmers connect with micro-loans, subsidies, and government schemes.</p>
+<section class="section">
+  <div class="container">
+
+    <div class="support-grid">
+      <div class="support-card">
+        <i class="fas fa-seedling"></i>
+        <h3>Agricultural Training</h3>
+        <p>Helping farmers adopt modern, organic, and high-value crop farming methods.</p>
+      </div>
+
+      <div class="support-card">
+        <i class="fas fa-tractor"></i>
+        <h3>Farm Guidance</h3>
+        <p>On-field support, crop planning, soil health, and irrigation solutions.</p>
+      </div>
+
+      <div class="support-card">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Business Mentorship</h3>
+        <p>Guiding villagers to start small rural businesses and cooperatives.</p>
+      </div>
+
+      <div class="support-card">
+        <i class="fas fa-hand-holding-heart"></i>
+        <h3>Community Development</h3>
+        <p>Supporting women empowerment, youth skill development, and village growth.</p>
+      </div>
     </div>
 
-    <div class="support-card">
-      <div class="support-icon"><i class="fas fa-store"></i></div>
-      <h3>Business Mentorship</h3>
-      <p>Villagers receive step-by-step guidance to start and grow sustainable businesses.</p>
+    <div class="help">
+      <h2>How You Can Support</h2>
+
+      <div class="help-list">
+        <div class="help-item">
+          <h4>🌾 Become a Partner</h4>
+          <p>Collaborate with us to scale rural programs and farming initiatives.</p>
+        </div>
+        <div class="help-item">
+          <h4>📚 Share Knowledge</h4>
+          <p>Help villages by sharing expertise, tools, or training support.</p>
+        </div>
+        <div class="help-item">
+          <h4>🤝 Sponsor Programs</h4>
+          <p>Support farmer training sessions, workshops, and demonstrations.</p>
+        </div>
+        <div class="help-item">
+          <h4>🌍 Spread Awareness</h4>
+          <p>Help us reach more people by sharing Devputra Agro’s mission.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cta">
+      <h3>Join Hands With Devputra Agro</h3>
+      <p>
+        Together, we can create sustainable livelihoods and empower rural India
+        for generations to come.
+      </p>
+      <a href="contact.html">Get Involved</a>
     </div>
   </div>
 </section>
-<section class="steps-section">
-  <h2 class="steps-title">Our Support Process</h2>
-  <div class="steps-grid">
-    <div class="step-box">
-      <div class="step-number">Step 1</div>
-      <h3>Initial Consultation</h3>
-      <p>We understand the farmer’s goals, land, and needs before recommending the best solutions.</p>
-    </div>
 
-    <div class="step-box">
-      <div class="step-number">Step 2</div>
-      <h3>Field Inspection</h3>
-      <p>Experts analyze soil, water availability, and crop suitability for better results.</p>
-    </div>
-    <div class="step-box">
-      <div class="step-number">Step 3</div>
-      <h3>Training & Implementation</h3>
-      <p>Farmers receive hands-on training followed by step-by-step implementation support.</p>
-    </div>
-    <div class="step-box">
-      <div class="step-number">Step 4</div>
-      <h3>Continuous Monitoring</h3>
-      <p>We regularly review progress and help farmers overcome challenges.</p>
-    </div>
-  </div>
-</section>
-<section class="support-cta">
-  <h2 style="color:#003f3f;">Ready to Grow With Us?</h2>
-  <button onclick="window.location.href='contact.html'">Join the Support Program</button>
-</section>
 <footer class="footer">
   <div class="footer-container">
-
     <div class="footer-brand">
       <h3>Devputra<span>Agro</span></h3>
       <p>Empowering villages through business, agriculture & community growth.</p>
     </div>
 
     <div class="footer-social">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
-    </div>
 
+  <a href="https://www.facebook.com/devputragro/" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook"></i>
+  </a>
+  <a href="https://www.instagram.com/devputragro/" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://twitter.com/Devputragro/" target="_blank" aria-label="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+
+  <a href="https://youtube.com/@Devputraindia" target="_blank" aria-label="YouTube">
+    <i class="fab fa-youtube"></i>
+  </a>
+
+</div>
     <p class="footer-copy">© 2025 Devputra Agro — Empowering Rural India</p>
   </div>
 </footer>
 <script>
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector("#navLinks");
+  const navLinks = document.querySelectorAll(".nav-links a");
+  const currentPage = window.location.pathname.split("/").pop();
 
-hamburger.addEventListener("click", (e) => {
-  e.stopPropagation();
-  navMenu.classList.toggle("open");
-});
-document.addEventListener("click", (e) => {
-  if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
-    navMenu.classList.remove("open");
-  }
-});
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute("href");
+
+    if (
+      linkPage === currentPage ||
+      (linkPage === "index.html" && currentPage === "")
+    ) {
+      link.classList.add("active");
+    }
+  });
 </script>
 </body>
 </html>

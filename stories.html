@@ -148,19 +148,16 @@
       max-width: 600px;
       margin: auto;
     }
-    .footer {
-      background: #0a9396;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
+    footer{
+      background:#003f3f;
+      color:white;
+      text-align:center;
+      padding:35px 20px;
+      margin-top:80px;
     }
-    .footer h3 {
-      font-size: 26px;
-      margin-bottom: 10px;
-    }
-    .footer p {
-      font-size: 14px;
-      opacity: 0.9;
+    footer p{
+      font-size:14px;
+      opacity:.9;
     }
     .footer-social {
   display: flex;
@@ -173,6 +170,7 @@
   font-size: 24px;
   transition: 0.3s ease;
 }
+
 .footer-social a:hover {
   transform: translateY(-5px);
   color: #e0fffb;
@@ -181,8 +179,11 @@
   color: #0a9396;
   font-weight: 700;
 }
-.nav-links a.active::after {
-  width: 100%;
+.nav-links a.active {
+  color: #003f3f;
+  font-weight: 700;
+  border-bottom: 3px solid #0a9396;
+  padding-bottom: 6px;
 }
     @media (max-width: 600px) {
       .stories-hero h2 {
@@ -197,10 +198,7 @@
     }
   </style>
 </head>
-
 <body>
-
-<!-- NAV -->
 <nav class="glass-nav">
   <div class="nav-container">
     <div class="logo">Devputra<span>Agro</span></div>
@@ -219,7 +217,6 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="stories-hero">
   <h2>Success Stories</h2>
   <p>
@@ -228,7 +225,6 @@
   </p>
 </section>
 
-<!-- STORIES -->
 <section class="stories-section">
   <div class="stories-container">
 
@@ -277,8 +273,6 @@
       </div>
 
     </div>
-
-    <!-- CTA -->
     <div class="story-cta">
       <h4>Your Story Could Be Next</h4>
       <p>

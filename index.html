@@ -210,7 +210,6 @@ body {
     }
     .glass-nav {
     position: fixed;
-  
    top: 0;
   width: 100%;
   padding: 15px 0;
@@ -221,7 +220,6 @@ body {
   transition: 0.3s ease, padding 0.3s ease;
   z-index: 999;
 }
-
 .nav-container {
   width: 90%;
   max-width: 1200px;
@@ -241,27 +239,27 @@ body {
 }
 .nav-links {
   display: flex;
-  gap: 35px;
+  align-items: center;
+  gap: 28px;
+}
+.nav-links li {
   list-style: none;
+  white-space: nowrap;
 }
-
 .nav-links li a {
-  color: #003f3f;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 18px;
   position: relative;
-  padding-bottom: 5px;
+  text-decoration: none;
+  color: #003f3f;
+  font-weight: 500;
 }
-
 .nav-links li a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -6px;
   width: 0%;
   height: 2px;
-  background: #2fa58a;
+  background-color: #0a9396;
   transition: width 0.3s ease;
 }
 .nav-links li a:hover::after {
@@ -328,36 +326,18 @@ body {
   font-weight: 700;
   color: #0a9396;
 }
-.footer {
-  background: #0a9396;
-  color: white;
-  padding: 50px 20px;
-  margin-top: 60px;
-}
-
-.footer-container {
-  max-width: 1100px;
-  margin: auto;
-  text-align: center;
-}
-
-.footer-brand h3 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.footer-brand h3 span {
-  color: #d9fdf5;
-}
-
-.footer-brand p {
-  font-size: 16px;
-  opacity: 0.9;
-  margin-bottom: 30px;
-}
-
-.footer-social {
+footer{
+      background:#003f3f;
+      color:white;
+      text-align:center;
+      padding:35px 20px;
+      margin-top:80px;
+    }
+    footer p{
+      font-size:14px;
+      opacity:.9;
+    }
+    .footer-social {
   display: flex;
   justify-content: center;
   gap: 22px;
@@ -1062,14 +1042,6 @@ section {
   color: #444;
   line-height: 1.6;
 }
-.nav-links a.active {
-  color: #0a9396;
-  font-weight: 700;
-}
-
-.nav-links a.active::after {
-  width: 100%;
-}
 @media (max-width: 600px) {
   .hero h2,
   .about-text h2,
@@ -1158,30 +1130,34 @@ section {
   .award-card p {
     font-size: 15px;
   }
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: 25px;
+    z-index: 10000;
+  }
   .nav-links {
     position: fixed;
     top: 0;
     left: -100%;
     width: 72%;
-    height: 100vh;        
-    overflow-y: auto;     
+    height: 100vh;
     display: flex;
     flex-direction: column;
     padding-top: 120px;
     padding-left: 30px;
     gap: 28px;
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-right: 1px solid rgba(0,0,0,0.1);
-    box-shadow: 4px 0 12px rgba(0,0,0,0.15);
-    transition: left 0.36s ease-in-out;
+    transition: left 0.35s ease-in-out;
     z-index: 9999;
   }
   .nav-links.open {
     left: 0;
   }
+}
   .nav-links li a {
     font-size: 20px;
     color: #003935;
@@ -1227,12 +1203,9 @@ section {
   }
   .faq-title { font-size: 32px; }
 }
+
 .hamburger {
-  display: block;
-  position: absolute;
-  top: 22px;
-  right: 25px;
-  z-index: 10000;
+  display: none;
 }
       .hero {
         padding: 120px 20px 70px;
@@ -1768,43 +1741,6 @@ section {
       <div class="collab-logo"><img src="./images/partner3.png" alt="Partner Logo"></div>
       <div class="collab-logo"><img src="./images/partner4.png" alt="Partner Logo"></div>
       <div class="collab-logo"><img src="./images/partner5.png" alt="Partner Logo"></div>
-    </div>
-  </div>
-</section>
-<section class="awards-section reveal" id="awards">
-  <div class="awards-container">
-
-    <h2 class="awards-title">Awards & Certifications</h2>
-    <p class="awards-subtext">
-      Recognizing our commitment to empowering rural India through sustainable agriculture,
-      digital literacy, and community development.
-    </p>
-
-    <div class="awards-grid">
-
-      <div class="award-card">
-        <div class="award-icon"><i class="fas fa-trophy"></i></div>
-        <h3>Best Rural Empowerment Initiative</h3>
-        <p>Awarded for outstanding contribution to village development programs and farmer upliftment.</p>
-      </div>
-
-      <div class="award-card">
-        <div class="award-icon"><i class="fas fa-certificate"></i></div>
-        <h3>Certified Organic Agriculture Trainer</h3>
-        <p>Recognized for promoting natural, chemical-free farming practices across multiple villages.</p>
-      </div>
-
-      <div class="award-card">
-        <div class="award-icon"><i class="fas fa-medal"></i></div>
-        <h3>Excellence in Community Training</h3>
-        <p>Honored for conducting impactful workshops on business, farming, and digital education.</p>
-      </div>
-
-      <div class="award-card">
-        <div class="award-icon"><i class="fas fa-award"></i></div>
-        <h3>Government Rural Development Partner</h3>
-        <p>Recognized for aligning with state and district-level development missions.</p>
-      </div>
     </div>
   </div>
 </section>

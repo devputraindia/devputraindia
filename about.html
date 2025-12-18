@@ -14,41 +14,11 @@
       background:#ffffff;
       line-height:1.6;
     }
-    .nav{
-      position:fixed;
-      top:0;
-      width:100%;
-      background:rgba(255,255,255,.95);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid #eee;
-      z-index:1000;
-    }
-    .nav-container{
-      max-width:1200px;
-      margin:auto;
-      padding:15px 20px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
-    .logo{
-      font-size:26px;
-      font-weight:700;
-      color:#0a9396;
-    }
-    .logo span{ color:#003f3f; }
-    .nav-links{
-      list-style:none;
-      display:flex;
-      gap:26px;
-    }
-    .nav-links a{
-      text-decoration:none;
-      color:#003f3f;
-      font-weight:500;
+    .page-offset{
+      padding-top:90px;
     }
     .hero{
-      padding:160px 20px 90px;
+      padding:120px 20px 90px;
       text-align:center;
       background:linear-gradient(135deg,#0a9396,#94d2bd);
     }
@@ -108,6 +78,7 @@
       box-shadow:0 6px 22px rgba(0,0,0,.12);
       object-fit:cover;
     }
+
     .values{
       padding:90px 20px;
       background:#ffffff;
@@ -156,45 +127,6 @@
       font-size:15px;
       color:#555;
     }
-    footer{
-      background:#003f3f;
-      color:white;
-      text-align:center;
-      padding:35px 20px;
-      margin-top:80px;
-    }
-    footer p{
-      font-size:14px;
-      opacity:.9;
-    }
-    .footer-social {
-  display: flex;
-  justify-content: center;
-  gap: 22px;
-  margin-bottom: 25px;
-}
-
-.footer-social a {
-  color: white;
-  font-size: 24px;
-  transition: 0.3s ease;
-}
-
-.footer-social a:hover {
-  transform: translateY(-5px);
-  color: #e0fffb;
-}
-.nav-links a.active {
-  color: #0a9396;
-  font-weight: 700;
-}
-
-.nav-links a.active {
-  color: #003f3f;
-  font-weight: 700;
-  border-bottom: 3px solid #0a9396;
-  padding-bottom: 6px;
-}
     @media(max-width:768px){
       .about-container{
         grid-template-columns:1fr;
@@ -213,135 +145,92 @@
 </head>
 
 <body>
-<nav class="nav">
-  <div class="nav-container">
-    <div class="logo">Devputra<span>Agro</span></div>
-    <ul class="nav-links" id="navLinks">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="mission.html">Mission</a></li>
-  <li><a href="crops.html">Special Crops</a></li>
-  <li><a href="awards.html">Awards</a></li>
-  <li><a href="stories.html">Stories</a></li>
-  <li><a href="support.html">Support</a></li>
-  <li><a href="collaborators.html">Collaborators</a></li>
-  <li><a href="contact.html">Contact</a></li>
-  <li><a href="press.html">Press</a></li>
-</ul>
-  </div>
-</nav>
-<section class="hero">
-  <h1>About Devputra Agro</h1>
-  <p>
-    Empowering villages through sustainable agriculture, rural entrepreneurship,
-    and future-ready skills.
-  </p>
-</section>
-<section class="about">
-  <div class="about-container">
+<div id="navbar"></div>
+<div class="page-offset">
+  <section class="hero">
+    <h1>About Devputra Agro</h1>
+    <p>
+      Empowering villages through sustainable agriculture, rural entrepreneurship,
+      and future-ready skills.
+    </p>
+  </section>
 
-    <div class="about-text">
-      <h2>Who We Are</h2>
-      <p>
-        Devputra Agro is a rural empowerment initiative dedicated to helping farmers
-        and villagers build sustainable livelihoods through modern agriculture,
-        business guidance, and market access.
-      </p>
-      <p>
-        We work closely with rural communities to promote high-value crops,
-        organic farming, and small-scale entrepreneurship—ensuring financial
-        independence and long-term growth.
-      </p>
-
-      <ul class="about-points">
-        <li><i class="fas fa-leaf"></i>Promoting high-value and organic crop cultivation</li>
-        <li><i class="fas fa-handshake"></i>Connecting farmers with buyers and partners</li>
-        <li><i class="fas fa-tractor"></i>Providing modern farming knowledge & training</li>
-        <li><i class="fas fa-lightbulb"></i>Supporting rural entrepreneurs and startups</li>
-        <li><i class="fas fa-users"></i>Building strong village-level communities</li>
-      </ul>
+  <section class="about">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>Who We Are</h2>
+        <p>
+          Devputra Agro is a rural empowerment initiative dedicated to helping farmers
+          and villagers build sustainable livelihoods through modern agriculture,
+          business guidance, and market access.
+        </p>
+        <p>
+          We work closely with rural communities to promote high-value crops,
+          organic farming, and small-scale entrepreneurship.
+        </p>
+        <ul class="about-points">
+          <li><i class="fas fa-leaf"></i>High-value & organic crops</li>
+          <li><i class="fas fa-handshake"></i>Market & buyer connections</li>
+          <li><i class="fas fa-tractor"></i>Modern farming training</li>
+          <li><i class="fas fa-lightbulb"></i>Entrepreneurship guidance</li>
+          <li><i class="fas fa-users"></i>Village-level community building</li>
+        </ul>
+      </div>
+      <div class="about-img">
+        <img src="./images/farm3.jpg" alt="Devputra Agro">
+      </div>
     </div>
-
-    <div class="about-img">
-      <img src="./images/farm3.jpg" alt="Devputra Agro Farming">
+  </section>
+  <section class="values">
+    <h2>Our Core Values</h2>
+    <p>The principles that guide our mission across rural India.</p>
+    <div class="values-grid">
+      <div class="value-card">
+        <i class="fas fa-handshake"></i>
+        <h3>Trust & Transparency</h3>
+        <p>Building honest relationships with farmers and partners.</p>
+      </div>
+      <div class="value-card">
+        <i class="fas fa-seedling"></i>
+        <h3>Sustainable Growth</h3>
+        <p>Protecting nature while increasing income.</p>
+      </div>
+      <div class="value-card">
+        <i class="fas fa-book"></i>
+        <h3>Knowledge for All</h3>
+        <p>Education accessible to every villager.</p>
+      </div>
+      <div class="value-card">
+        <i class="fas fa-tractor"></i>
+        <h3>Future-Ready Skills</h3>
+        <p>Preparing villages for modern agriculture.</p>
+      </div>
     </div>
-
-  </div>
-</section>
-
-<section class="values">
-  <h2>Our Core Values</h2>
-  <p>The principles that guide our mission and impact across rural India.</p>
-
-  <div class="values-grid">
-
-    <div class="value-card">
-      <i class="fas fa-handshake"></i>
-      <h3>Trust & Transparency</h3>
-      <p>We build honest relationships with farmers and partners.</p>
-    </div>
-
-    <div class="value-card">
-      <i class="fas fa-seedling"></i>
-      <h3>Sustainable Growth</h3>
-      <p>Farming methods that protect nature and ensure long-term income.</p>
-    </div>
-
-    <div class="value-card">
-      <i class="fas fa-book"></i>
-      <h3>Knowledge for All</h3>
-      <p>Accessible education for every villager, regardless of background.</p>
-    </div>
-
-    <div class="value-card">
-      <i class="fas fa-tractor"></i>
-      <h3>Future-Ready Skills</h3>
-      <p>Preparing communities for modern agriculture and digital tools.</p>
-    </div>
-
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="footer-container">
-
-    <div class="footer-brand">
-      <h3>Devputra<span>Agro</span></h3>
-      <p>Empowering villages through business, agriculture & community growth.</p>
-    </div>
-
-    <div class="footer-social">
-  <a href="https://www.facebook.com/devputragro/" target="_blank" aria-label="Facebook">
-    <i class="fab fa-facebook"></i>
-  </a>
-  <a href="https://www.instagram.com/devputragro/" target="_blank" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://twitter.com/Devputragro/" target="_blank" aria-label="Twitter">
-    <i class="fab fa-twitter"></i>
-  </a>
-
-  <a href="https://youtube.com/@Devputraindia" target="_blank" aria-label="YouTube">
-    <i class="fab fa-youtube"></i>
-  </a>
+  </section>
 
 </div>
-    <p class="footer-copy">© 2025 Devputra Agro — Empowering Rural India</p>
-  </div>
-</footer>
-<script>
-  const navLinks = document.querySelectorAll(".nav-links a");
-  const currentPage = window.location.pathname.split("/").pop();
-  navLinks.forEach(link => {
-    const linkPage = link.getAttribute("href");
+<div id="footer"></div>
 
-    if (
-      linkPage === currentPage ||
-      (linkPage === "index.html" && currentPage === "")
-    ) {
-      link.classList.add("active");
-    }
-  });
+<script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("navbar").innerHTML = html;
+
+      const current =
+        window.location.pathname.split("/").pop() || "index.html";
+
+      document.querySelectorAll(".nav-links a").forEach(link => {
+        if (link.getAttribute("href") === current) {
+          link.classList.add("active");
+        }
+      });
+    });
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("footer").innerHTML = html;
+    });
 </script>
 </body>
 </html>

@@ -1,10 +1,15 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Mission & Vision - Devputra Agro</title>
 
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+
 
   <style>
     body {
@@ -12,70 +17,46 @@
       font-family: "Poppins", sans-serif;
       background: #ffffff;
       color: #1a1a1a;
+      line-height: 1.6;
     }
-    .nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #eee;
-      z-index: 1000;
+    .page-offset {
+      margin-top: 90px;
     }
-    .nav-container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      font-size: 26px;
-      font-weight: 700;
-      color: #0a9396;
-    }
-    .logo span {
-      color: #003f3f;
-    }
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 28px;
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: #003f3f;
-      font-weight: 500;
-    }
+
     .mission-hero {
       padding: 160px 20px 90px;
       text-align: center;
       background: linear-gradient(135deg, #0a9396, #94d2bd);
     }
+
     .mission-hero h1 {
       font-size: 44px;
       font-weight: 700;
       color: #003f3f;
     }
+
     .mission-hero p {
       font-size: 18px;
       max-width: 720px;
       margin: 15px auto 0;
       color: #084b4b;
     }
+
     .section {
       padding: 90px 20px;
     }
+
     .container {
       max-width: 1100px;
       margin: auto;
     }
+
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
     }
+
     .card {
       background: #f6fefe;
       padding: 35px;
@@ -84,55 +65,65 @@
       transition: 0.3s ease;
       text-align: center;
     }
+
     .card:hover {
       transform: translateY(-8px);
       box-shadow: 0 12px 28px rgba(0,0,0,0.12);
     }
+
     .card i {
       font-size: 48px;
       color: #0a9396;
       margin-bottom: 15px;
     }
+
     .card h2 {
       font-size: 26px;
       color: #003f3f;
       margin-bottom: 12px;
     }
+
     .card p {
       font-size: 16px;
       color: #444;
       line-height: 1.7;
     }
+
     .values {
-      background: #ffffff;
       margin-top: 60px;
     }
+
     .values h3 {
       text-align: center;
       font-size: 36px;
       color: #0a9396;
       margin-bottom: 40px;
     }
+
     .value-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 25px;
     }
+
     .value-item {
       background: white;
       padding: 25px;
       border-radius: 16px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     }
+
     .value-item h4 {
       color: #003f3f;
       margin-bottom: 8px;
     }
+
     .value-item p {
       font-size: 15px;
       color: #555;
       line-height: 1.6;
     }
+
     .cta {
       margin-top: 80px;
       padding: 60px 30px;
@@ -141,52 +132,18 @@
       text-align: center;
       border-radius: 18px;
     }
+
     .cta h3 {
       font-size: 30px;
       margin-bottom: 10px;
     }
+
     .cta p {
       font-size: 16px;
       max-width: 600px;
       margin: auto;
       opacity: 0.9;
     }
-    footer {
-      background: #003f3f;
-      color: white;
-      text-align: center;
-      padding: 35px 20px;
-      margin-top: 70px;
-    }
-    footer p {
-      font-size: 14px;
-      opacity: 0.9;
-    }
-    .footer-social {
-  display: flex;
-  justify-content: center;
-  gap: 22px;
-  margin-bottom: 25px;
-}
-.footer-social a {
-  color: white;
-  font-size: 24px;
-  transition: 0.3s ease;
-}
-.footer-social a:hover {
-  transform: translateY(-5px);
-  color: #e0fffb;
-}
-.nav-links a.active {
-  color: #0a9396;
-  font-weight: 700;
-}
-.nav-links a.active {
-  color: #003f3f;
-  font-weight: 700;
-  border-bottom: 3px solid #0a9396;
-  padding-bottom: 6px;
-}
 
     @media (max-width: 600px) {
       .mission-hero h1 {
@@ -203,129 +160,104 @@
 </head>
 
 <body>
-<nav class="nav">
-  <div class="nav-container">
-    <div class="logo">Devputra<span>Agro</span></div>
-    <ul class="nav-links" id="navLinks">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="mission.html">Mission</a></li>
-  <li><a href="crops.html">Special Crops</a></li>
-  <li><a href="awards.html">Awards</a></li>
-  <li><a href="stories.html">Stories</a></li>
-  <li><a href="support.html">Support</a></li>
-  <li><a href="collaborators.html">Collaborators</a></li>
-  <li><a href="contact.html">Contact</a></li>
-  <li><a href="press.html">Press</a></li>
-</ul>
-  </div>
-</nav>
 
-<section class="mission-hero">
-  <h1>Our Mission & Vision</h1>
-  <p>
-    Building a future where every village is empowered, self-reliant,
-    and thriving through sustainable agriculture and rural entrepreneurship.
-  </p>
-</section>
-<section class="section">
-  <div class="container">
-    <div class="cards">
-      <div class="card">
-        <i class="fas fa-bullseye"></i>
-        <h2>Our Mission</h2>
+<div id="navbar"></div>
+
+<div class="page-offset">
+
+  <section class="mission-hero">
+    <h1>Our Mission & Vision</h1>
+    <p>
+      Building a future where every village is empowered, self-reliant,
+      and thriving through sustainable agriculture and rural entrepreneurship.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="cards">
+        <div class="card">
+          <i class="fas fa-bullseye"></i>
+          <h2>Our Mission</h2>
+          <p>
+            To empower rural communities by providing agricultural knowledge,
+            business guidance, and modern farming practices that lead to
+            sustainable income, dignity, and long-term growth.
+          </p>
+        </div>
+
+        <div class="card">
+          <i class="fas fa-seedling"></i>
+          <h2>Our Vision</h2>
+          <p>
+            To create a self-reliant rural India where farmers, women,
+            and youth can access opportunities, technology, and markets
+            without leaving their villages.
+          </p>
+        </div>
+      </div>
+
+      <div class="values">
+        <h3>What Drives Us</h3>
+
+        <div class="value-list">
+          <div class="value-item">
+            <h4>🌱 Sustainability</h4>
+            <p>Promoting eco-friendly farming and long-term agricultural growth.</p>
+          </div>
+
+          <div class="value-item">
+            <h4>🤝 Trust</h4>
+            <p>Building honest, transparent relationships with every farmer.</p>
+          </div>
+
+          <div class="value-item">
+            <h4>📚 Education</h4>
+            <p>Empowering villages with knowledge and practical training.</p>
+          </div>
+
+          <div class="value-item">
+            <h4>🚜 Innovation</h4>
+            <p>Introducing modern tools, techniques, and digital awareness.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta">
+        <h3>Join Our Mission</h3>
         <p>
-          To empower rural communities by providing agricultural knowledge,
-          business guidance, and modern farming practices that lead to
-          sustainable income, dignity, and long-term growth.
+          Be a part of Devputra Agro’s journey to uplift rural India and
+          create sustainable livelihoods for future generations.
         </p>
       </div>
-      <div class="card">
-        <i class="fas fa-seedling"></i>
-        <h2>Our Vision</h2>
-        <p>
-          To create a self-reliant rural India where farmers, women,
-          and youth can access opportunities, technology, and markets
-          without leaving their villages.
-        </p>
-      </div>
 
     </div>
-    <div class="values">
-      <h3>What Drives Us</h3>
-
-      <div class="value-list">
-        <div class="value-item">
-          <h4>🌱 Sustainability</h4>
-          <p>Promoting eco-friendly farming and long-term agricultural growth.</p>
-        </div>
-
-        <div class="value-item">
-          <h4>🤝 Trust</h4>
-          <p>Building honest, transparent relationships with every farmer.</p>
-        </div>
-
-        <div class="value-item">
-          <h4>📚 Education</h4>
-          <p>Empowering villages with knowledge and practical training.</p>
-        </div>
-
-        <div class="value-item">
-          <h4>🚜 Innovation</h4>
-          <p>Introducing modern tools, techniques, and digital awareness.</p>
-        </div>
-      </div>
-    </div>
-    <div class="cta">
-      <h3>Join Our Mission</h3>
-      <p>
-        Be a part of Devputra Agro’s journey to uplift rural India and
-        create sustainable livelihoods for future generations.
-      </p>
-    </div>
-  </div>
-</section>
-<footer class="footer">
-  <div class="footer-container">
-
-    <div class="footer-brand">
-      <h3>Devputra<span>Agro</span></h3>
-      <p>Empowering villages through business, agriculture & community growth.</p>
-    </div>
-    <div class="footer-social">
-
-  <a href="https://www.facebook.com/devputragro/" target="_blank" aria-label="Facebook">
-    <i class="fab fa-facebook"></i>
-  </a>
-  <a href="https://www.instagram.com/devputragro/" target="_blank" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://twitter.com/Devputragro/" target="_blank" aria-label="Twitter">
-    <i class="fab fa-twitter"></i>
-  </a>
-
-  <a href="https://youtube.com/@Devputraindia" target="_blank" aria-label="YouTube">
-    <i class="fab fa-youtube"></i>
-  </a>
+  </section>
 
 </div>
-    <p class="footer-copy">© 2025 Devputra Agro — Empowering Rural India</p>
-  </div>
-</footer>
+
+<div id="footer"></div>
+
 <script>
-  const navLinks = document.querySelectorAll(".nav-links a");
-  const currentPage = window.location.pathname.split("/").pop();
+  
+  fetch("nav.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
 
-  navLinks.forEach(link => {
-    const linkPage = link.getAttribute("href");
+      document.querySelectorAll(".nav-links a").forEach(link => {
+        if (link.getAttribute("href") === "mission.html") {
+          link.classList.add("active");
+        }
+      });
+    });
 
-    if (
-      linkPage === currentPage ||
-      (linkPage === "index.html" && currentPage === "")
-    ) {
-      link.classList.add("active");
-    }
-  });
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
 </script>
 
 </body>

@@ -200,81 +200,6 @@ body {
 .contact-btn:hover {
   background: #086f72;
 }
-
-    footer {
-      background: #f2f2f2;
-      padding: 30px 20px;
-      text-align: center;
-      color: #666;
-      font-size: 16px;
-    }
-    .glass-nav {
-    position: fixed;
-   top: 0;
-  width: 100%;
-  padding: 15px 0;
-  backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.14);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 4px 25px rgba(0,0,0,0.05);
-  transition: 0.3s ease, padding 0.3s ease;
-  z-index: 999;
-}
-.nav-container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 28px;
-  font-weight: 700;
-  color: #0b4d4d;
-}
-.logo span {
-  color: #2fa58a;
-}
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-.nav-links li {
-  list-style: none;
-  white-space: nowrap;
-}
-.nav-links li a {
-  position: relative;
-  text-decoration: none;
-  color: #003f3f;
-  font-weight: 500;
-}
-.nav-links li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0%;
-  height: 2px;
-  background-color: #0a9396;
-  transition: width 0.3s ease;
-}
-.nav-links li a:hover::after {
-  width: 100%;
-}
-.hamburger {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-  color: #0b4d4d;
-}
-.hamburger i {
-  font-size: 30px;
-  color: #0b4d4d;
-}
 .testimonials {
   padding: 80px 20px;
   text-align: center;
@@ -326,120 +251,7 @@ body {
   font-weight: 700;
   color: #0a9396;
 }
-footer{
-      background:#003f3f;
-      color:white;
-      text-align:center;
-      padding:35px 20px;
-      margin-top:80px;
-    }
-    footer p{
-      font-size:14px;
-      opacity:.9;
-    }
-    .footer-social {
-  display: flex;
-  justify-content: center;
-  gap: 22px;
-  margin-bottom: 25px;
-}
 
-.footer-social a {
-  color: white;
-  font-size: 24px;
-  transition: 0.3s ease;
-}
-
-.footer-social a:hover {
-  transform: translateY(-5px);
-  color: #e0fffb;
-}
-
-.footer-copy {
-  font-size: 14px;
-  opacity: 0.85;
-}
-  .about-section {
-  padding: 100px 20px;
-  background: #f6fefe;
-}
-
-.about-container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
-}
-
-.about-text {
-  flex: 1;
-  min-width: 300px;
-}
-
-.about-text h2 {
-  font-size: 42px;
-  color: #0a9396;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.about-text p {
-  font-size: 18px;
-  color: #444;
-  line-height: 1.7;
-  margin-bottom: 20px;
-}
-.about-points {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 15px;
-}
-
-.about-points li {
-  display: grid;
-  grid-template-columns: 24px auto;
-  gap: 10px;
-  align-items: start;
-  font-size: 17px;
-  margin-bottom: 14px;
-  color: #003f3f;
-}
-.about-points i {
-  font-size: 20px;
-  color: #0a9396;
-}
-.about-icon {
-  min-width: 38px;
-  height: 38px;
-  background: rgba(10, 147, 150, 0.12);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  color: #0a9396;
-  flex-shrink: 0;
-}
-
-.about-image {
-  flex: 1;
-  min-width: 300px;
-}
-
-.about-image img {
-  width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-  object-fit: fill;
-}
-
-.about-text,
-.testimonial-card {
-  text-align: left;
-}
 
 .faq-section {
   padding: 100px 20px;
@@ -743,72 +555,7 @@ section {
   font-size: 16px;
   line-height: 1.6;
 }
-.stories {
-  padding: 100px 20px;
-  background: #ffffff;
-}
 
-.stories-container {
-  max-width: 1200px;
-  margin: auto;
-  text-align: center;
-}
-
-.stories-title {
-  font-size: 42px;
-  font-weight: 700;
-  color: #0a9396;
-  margin-bottom: 10px;
-}
-
-.stories-subtext {
-  font-size: 18px;
-  color: #444;
-  max-width: 650px;
-  margin: 0 auto 50px;
-}
-
-.stories-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-.story-card {
-  background: #f6fefe;
-  border-radius: 18px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.story-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
-}
-
-.story-img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.story-content {
-  padding: 22px;
-  text-align: left;
-}
-
-.story-content h3 {
-  font-size: 22px;
-  color: #003f3f;
-  margin-bottom: 10px;
-}
-
-.story-content p {
-  font-size: 16px;
-  color: #444;
-  line-height: 1.6;
-}
 .support-btn {
   margin-top: 20px;
   padding: 14px 40px;
@@ -1057,43 +804,16 @@ section {
     font-size: 15px;
   }
   section,
-  .about-section,
   .contact-section,
   .testimonials {
     padding: 15px 20px;
   }
-  .about-text,
   .testimonial-card{
     text-align: center;
   }
   .full-image {
     max-height: 280px;
     object-fit: fill;
-  }
-  .footer-brand h3 {
-    font-size: 26px;
-  }
-
-  .footer-social a {
-    font-size: 22px;
-  }
-  .about-points li {
-    font-size: 16px;
-    gap: 8px;
-  }
-
-  .about-text h2 {
-    font-size: 32px;
-  }
-}
-.story-img {
-    height: 180px;
-  }
-  .story-content h3 {
-    font-size: 20px;
-  }
-  .stories-title {
-    font-size: 32px;
   }
   {
   .collab-title { font-size: 32px; }
@@ -1131,38 +851,6 @@ section {
     font-size: 15px;
   }
   @media (max-width: 768px) {
-  .hamburger {
-    display: block;
-    position: absolute;
-    top: 22px;
-    right: 25px;
-    z-index: 10000;
-  }
-  .nav-links {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 72%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding-top: 120px;
-    padding-left: 30px;
-    gap: 28px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(15px);
-    transition: left 0.35s ease-in-out;
-    z-index: 9999;
-  }
-  .nav-links.open {
-    left: 0;
-  }
-}
-  .nav-links li a {
-    font-size: 20px;
-    color: #003935;
-    font-weight: 600;
-  }
    .mv-card h3 {
     font-size: 24px;
   }
@@ -1202,10 +890,6 @@ section {
     font-size: 18px;
   }
   .faq-title { font-size: 32px; }
-}
-
-.hamburger {
-  display: none;
 }
       .hero {
         padding: 120px 20px 70px;
@@ -1249,28 +933,7 @@ section {
 
 <body>
   <header>
-    <nav class="glass-nav">
-      <div class="nav-container">
-    <div class="logo">Devputra<span>Agro</span></div>
-
-    <div class="hamburger">
-      <i class="fas fa-bars"></i>
-    </div>
-
-    <ul class="nav-links" id="navLinks">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="mission.html">Mission</a></li>
-  <li><a href="crops.html">Special Crops</a></li>
-  <li><a href="awards.html">Awards</a></li>
-  <li><a href="stories.html">Stories</a></li>
-  <li><a href="support.html">Support</a></li>
-  <li><a href="collaborators.html">Collaborators</a></li>
-  <li><a href="contact.html">Contact</a></li>
-  <li><a href="press.html">Press</a></li>
-</ul>
-  </div>
-</nav>
+    <div id="navbar"></div>
   </header>
   <section id="home" class="hero">
     <h2>Empowering Villagers to Build Businesses & Grow Specialized Crops</h2>
@@ -1281,52 +944,6 @@ section {
     <button>Explore Our Mission</button>
   </section>
   <img src="./images/farm1.png" class="full-image" >
-  <section id="about" class="about-section reveal">
-  <div class="about-container">
-    <div class="about-text">
-      <h2>About Devputra Agro</h2>
-      <p>
-        Devputra Agro is a rural empowerment initiative focused on helping villagers 
-        build sustainable businesses, grow high-value crops, and access modern agricultural 
-        knowledge. Our goal is to create independent, financially strong, and future-ready communities.
-      </p>
-      <p>
-        We work closely with farmers, rural entrepreneurs, and village youth, providing 
-        hands-on mentorship, training, and support so they can grow, earn, and create 
-        new opportunities within their own villages.
-      </p>
-      <ul class="about-points">
-        <li>
-    <div class="about-icon"><i class="fas fa-leaf"></i></div>
-    Supporting villagers in growing high-value organic crops.
-  </li>
-  <li>
-    <div class="about-icon"><i class="fas fa-handshake"></i></div>
-    Building a bridge between local producers and global buyers.
-  </li>
-  <li>
-    <div class="about-icon"><i class="fas fa-box-open"></i></div>
-    Helping villagers sell their handmade products worldwide.
-  </li>
-  <li>
-    <div class="about-icon"><i class="fas fa-tractor"></i></div>
-    Providing modern farming knowledge & training.
-  </li>
-
-  <li>
-    <div class="about-icon"><i class="fas fa-lightbulb"></i></div>
-    Guiding rural entrepreneurs with business planning.
-  </li>
-
-</ul>
-
-    </div>
-
-    <div class="about-image">
-      <img src="./images/farm3.jpg" alt="About Devputra Agro">
-    </div>
-    </div>
-    </section>
     <section class="mission-vision reveal" id="mission">
   <div class="mv-container">
 
@@ -1579,55 +1196,6 @@ section {
     </div>
   </div>
 </section>
-<section class="stories reveal" id="stories">
-  <div class="stories-container">
-
-    <h2 class="stories-title">Success Stories</h2>
-    <p class="stories-subtext">
-      Real journeys of farmers and rural entrepreneurs transformed through Devputra Agro.
-    </p>
-
-    <div class="stories-grid">
-
-      <div class="story-card">
-        <img src="./images/story1.jpg" alt="Farmer Success" class="story-img">
-        <div class="story-content">
-          <h3>Gurmeet Singh - Punjab</h3>
-          <p>
-            Gurmeet shifted from traditional wheat farming to Stevia cultivation.  
-            His income increased by 40% in the first year, thanks to Devputra Agro's crop guidance.
-          </p>
-        </div>
-      </div>
-
-      <div class="story-card">
-        <img src="./images/story2.jpeg" alt="Women Entrepreneur" class="story-img">
-        <div class="story-content">
-          <h3>Kavita Devi - Haryana</h3>
-          <p>
-            Kavita started a small dairy and handmade products unit with our training.  
-            Today she employs 5 local women and sells her products across districts.
-          </p>
-        </div>
-      </div>
-
-      <div class="story-card">
-        <img src="./images/story3.jpg" alt="Farmer Training" class="story-img">
-        <div class="story-content">
-          <h3>Rakesh Kumar - Uttar Pradesh</h3>
-          <p>
-            After learning modern techniques, Rakesh adopted turmeric and aloe vera farming,  
-            boosting profits and reducing farming costs significantly.
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-  </div>
-</section>
 <section class="community reveal" id="community">
   <div class="community-container">
 
@@ -1744,36 +1312,47 @@ section {
     </div>
   </div>
 </section>
-  <footer class="footer">
-  <div class="footer-container">
-
-    <div class="footer-brand">
-      <h3>Devputra<span>Agro</span></h3>
-      <p>Empowering villages through business, agriculture & community growth.</p>
-    </div>
-
-    <div class="footer-social">
-
-  <a href="https://www.facebook.com/devputragro/" target="_blank" aria-label="Facebook">
-    <i class="fab fa-facebook"></i>
-  </a>
-  <a href="https://www.instagram.com/devputragro/" target="_blank" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://twitter.com/Devputragro/" target="_blank" aria-label="Twitter">
-    <i class="fab fa-twitter"></i>
-  </a>
-
-  <a href="https://youtube.com/@Devputraindia" target="_blank" aria-label="YouTube">
-    <i class="fab fa-youtube"></i>
-  </a>
-
-</div>
-    <p class="footer-copy">© 2025 Devputra Agro — Empowering Rural India</p>
-  </div>
-</footer>
+  <div id="footer"></div>
   <script>
+fetch("nav.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    });
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector("#navLinks");
+
+    if (hamburger && navMenu) {
+      hamburger.addEventListener("click", e => {
+        e.stopPropagation();
+        navMenu.classList.toggle("open");
+      });
+
+      document.addEventListener("click", e => {
+        if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+          navMenu.classList.remove("open");
+        }
+      });
+
+      document.querySelectorAll("#navLinks a").forEach(link => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("open");
+        });
+      });
+    }
+  });
+fetch("footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
 const reveals = document.querySelectorAll(".reveal");
+
 function revealOnScroll() {
   reveals.forEach(el => {
     const windowHeight = window.innerHeight;
@@ -1785,38 +1364,22 @@ function revealOnScroll() {
   });
 }
 window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
 
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector("#navLinks");
-
-hamburger.addEventListener("click", (e) => {
-  e.stopPropagation();
-  navMenu.classList.toggle("open");
-});
-document.addEventListener("click", (e) => {
-  if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
-    navMenu.classList.remove("open");
-  }
-});
-
-document.querySelectorAll("#navLinks a").forEach(link => {
-  link.addEventListener("click", () => {
-    navMenu.classList.remove("open");
-  });
-});
 const faqItems = document.querySelectorAll(".faq-item");
-
 faqItems.forEach(item => {
   item.addEventListener("click", () => {
     item.classList.toggle("active");
   });
 });
-
 const counters = document.querySelectorAll(".impact-number");
 let started = false;
 
 function startCounter() {
-  if (!started && window.scrollY + window.innerHeight >= document.querySelector(".impact").offsetTop) {
+  const impactSection = document.querySelector(".impact");
+  if (!impactSection) return;
+
+  if (!started && window.scrollY + window.innerHeight >= impactSection.offsetTop) {
     counters.forEach(counter => {
       let target = +counter.dataset.target;
       let count = 0;
@@ -1835,19 +1398,6 @@ function startCounter() {
   }
 }
 window.addEventListener("scroll", startCounter);
-const navLinks = document.querySelectorAll(".nav-links a");
-  const currentPage = window.location.pathname.split("/").pop();
-
-  navLinks.forEach(link => {
-    const linkPage = link.getAttribute("href");
-
-    if (
-      linkPage === currentPage ||
-      (linkPage === "index.html" && currentPage === "")
-    ) {
-      link.classList.add("active");
-    }
-  });
 </script>
 </script>
 </body>

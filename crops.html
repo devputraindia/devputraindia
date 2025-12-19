@@ -1,10 +1,15 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Special Crops - Devputra Agro</title>
 
+  
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+
 
   <style>
     body {
@@ -14,69 +19,44 @@
       color: #1a1a1a;
       line-height: 1.6;
     }
-    .nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #eee;
-      z-index: 1000;
+    .page-offset {
+      margin-top: 90px;
     }
-    .nav-container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      font-size: 26px;
-      font-weight: 700;
-      color: #0a9396;
-    }
-    .logo span {
-      color: #003f3f;
-    }
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 28px;
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: #003f3f;
-      font-weight: 500;
-    }
+
     .hero {
       padding: 160px 20px 90px;
       text-align: center;
       background: linear-gradient(135deg, #0a9396, #94d2bd);
     }
+
     .hero h1 {
       font-size: 44px;
       font-weight: 700;
       color: #003f3f;
     }
+
     .hero p {
       font-size: 18px;
       max-width: 760px;
       margin: 15px auto 0;
       color: #084b4b;
     }
+
     .section {
       padding: 90px 20px;
     }
+
     .container {
       max-width: 1200px;
       margin: auto;
     }
+
     .crops-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
     }
+
     .crop-card {
       background: #f6fefe;
       padding: 35px 30px;
@@ -84,33 +64,40 @@
       box-shadow: 0 6px 20px rgba(0,0,0,0.08);
       transition: 0.3s ease;
     }
+
     .crop-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 12px 28px rgba(0,0,0,0.12);
     }
+
     .crop-icon {
       font-size: 46px;
       color: #0a9396;
       margin-bottom: 15px;
     }
+
     .crop-card h3 {
       font-size: 22px;
       color: #003f3f;
       margin-bottom: 10px;
     }
+
     .crop-card p {
       font-size: 16px;
       color: #444;
       margin-bottom: 15px;
     }
+
     .crop-points {
       padding-left: 18px;
       font-size: 15px;
       color: #444;
     }
+
     .crop-points li {
       margin-bottom: 8px;
     }
+
     .cta {
       margin-top: 90px;
       padding: 70px 30px;
@@ -119,16 +106,19 @@
       text-align: center;
       border-radius: 20px;
     }
+
     .cta h3 {
       font-size: 32px;
       margin-bottom: 12px;
     }
+
     .cta p {
       font-size: 16px;
       max-width: 600px;
       margin: auto;
       opacity: 0.95;
     }
+
     .cta a {
       display: inline-block;
       margin-top: 25px;
@@ -140,46 +130,11 @@
       font-weight: 600;
       transition: 0.3s ease;
     }
+
     .cta a:hover {
       background: #005f5f;
       transform: translateY(-3px);
     }
-    footer {
-      background: #003f3f;
-      color: white;
-      text-align: center;
-      padding: 35px 20px;
-      margin-top: 80px;
-    }
-    footer p {
-      font-size: 14px;
-      opacity: 0.9;
-    }
-    .footer-social {
-  display: flex;
-  justify-content: center;
-  gap: 22px;
-  margin-bottom: 25px;
-}
-.footer-social a {
-  color: white;
-  font-size: 24px;
-  transition: 0.3s ease;
-}
-.footer-social a:hover {
-  transform: translateY(-5px);
-  color: #e0fffb;
-}
-.nav-links a.active {
-  color: #0a9396;
-  font-weight: 700;
-}
-.nav-links a.active {
-  color: #003f3f;
-  font-weight: 700;
-  border-bottom: 3px solid #0a9396;
-  padding-bottom: 6px;
-}
 
     @media (max-width: 600px) {
       .hero h1 {
@@ -197,144 +152,115 @@
 
 <body>
 
-<nav class="nav">
-  <div class="nav-container">
-    <div class="logo">Devputra<span>Agro</span></div>
-    <ul class="nav-links" id="navLinks">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="mission.html">Mission</a></li>
-  <li><a href="crops.html">Special Crops</a></li>
-  <li><a href="awards.html">Awards</a></li>
-  <li><a href="stories.html">Stories</a></li>
-  <li><a href="support.html">Support</a></li>
-  <li><a href="collaborators.html">Collaborators</a></li>
-  <li><a href="contact.html">Contact</a></li>
-  <li><a href="press.html">Press</a></li>
-</ul>
-  </div>
-</nav>
+<div id="navbar"></div>
 
-<section class="hero">
-  <h1>Special Crops We Promote</h1>
-  <p>
-    Devputra Agro helps farmers shift from traditional farming
-    to high-value, low-risk crops that ensure better income and sustainability.
-  </p>
-</section>
-<section class="section">
-  <div class="container">
+<div class="page-offset">
 
-    <div class="crops-grid">
+  <section class="hero">
+    <h1>Special Crops We Promote</h1>
+    <p>
+      Devputra Agro helps farmers shift from traditional farming
+      to high-value, low-risk crops that ensure better income and sustainability.
+    </p>
+  </section>
 
-      <div class="crop-card">
-        <div class="crop-icon"><i class="fas fa-leaf"></i></div>
-        <h3>Stevia Farming</h3>
-        <p>A natural sweetener crop with global demand.</p>
-        <ul class="crop-points">
-          <li>4x higher profit than sugarcane</li>
-          <li>Low water requirement</li>
-          <li>High export demand</li>
-        </ul>
+  <section class="section">
+    <div class="container">
+
+      <div class="crops-grid">
+
+        <div class="crop-card">
+          <div class="crop-icon"><i class="fas fa-leaf"></i></div>
+          <h3>Stevia Farming</h3>
+          <p>A natural sweetener crop with global demand.</p>
+          <ul class="crop-points">
+            <li>4x higher profit than sugarcane</li>
+            <li>Low water requirement</li>
+            <li>High export demand</li>
+          </ul>
+        </div>
+
+        <div class="crop-card">
+          <div class="crop-icon"><i class="fas fa-spa"></i></div>
+          <h3>Aloe Vera Farming</h3>
+          <p>Medicinal crop used in cosmetics and Ayurveda.</p>
+          <ul class="crop-points">
+            <li>Low maintenance crop</li>
+            <li>High market stability</li>
+            <li>Suitable for dry regions</li>
+          </ul>
+        </div>
+
+        <div class="crop-card">
+          <div class="crop-icon"><i class="fas fa-apple-alt"></i></div>
+          <h3>Dragon Fruit Farming</h3>
+          <p>Exotic fruit gaining popularity across India.</p>
+          <ul class="crop-points">
+            <li>High income per acre</li>
+            <li>Low pest issues</li>
+            <li>Fast growing market</li>
+          </ul>
+        </div>
+
+        <div class="crop-card">
+          <div class="crop-icon"><i class="fas fa-seedling"></i></div>
+          <h3>Turmeric Farming</h3>
+          <p>High-value spice with medicinal importance.</p>
+          <ul class="crop-points">
+            <li>Strong domestic demand</li>
+            <li>Used in medicine & food</li>
+            <li>Organic premium pricing</li>
+          </ul>
+        </div>
+
+        <div class="crop-card">
+          <div class="crop-icon"><i class="fas fa-seedling"></i></div>
+          <h3>Medicinal Herbs</h3>
+          <p>Special herbs for pharma & wellness industries.</p>
+          <ul class="crop-points">
+            <li>Contract farming options</li>
+            <li>Export-oriented crops</li>
+            <li>Low cultivation cost</li>
+          </ul>
+        </div>
+
       </div>
 
-      <div class="crop-card">
-        <div class="crop-icon"><i class="fas fa-spa"></i></div>
-        <h3>Aloe Vera Farming</h3>
-        <p>Medicinal crop used in cosmetics and Ayurveda.</p>
-        <ul class="crop-points">
-          <li>Low maintenance crop</li>
-          <li>High market stability</li>
-          <li>Suitable for dry regions</li>
-        </ul>
-      </div>
-      <div class="crop-card">
-        <div class="crop-icon"><i class="fas fa-apple-alt"></i></div>
-        <h3>Dragon Fruit Farming</h3>
-        <p>Exotic fruit gaining popularity across India.</p>
-        <ul class="crop-points">
-          <li>High income per acre</li>
-          <li>Low pest issues</li>
-          <li>Fast growing market</li>
-        </ul>
-      </div>
-
-      <div class="crop-card">
-        <div class="crop-icon"><i class="fas fa-seedling"></i></div>
-        <h3>Turmeric Farming</h3>
-        <p>High-value spice with medicinal importance.</p>
-        <ul class="crop-points">
-          <li>Strong domestic demand</li>
-          <li>Used in medicine & food</li>
-          <li>Organic premium pricing</li>
-        </ul>
-      </div>
-      <div class="crop-card">
-        <div class="crop-icon"><i class="fas fa-seedling"></i></div>
-        <h3>Medicinal Herbs</h3>
-        <p>Special herbs for pharma & wellness industries.</p>
-        <ul class="crop-points">
-          <li>Contract farming options</li>
-          <li>Export-oriented crops</li>
-          <li>Low cultivation cost</li>
-        </ul>
+      <div class="cta">
+        <h3>Want to Start Specialized Crop Farming?</h3>
+        <p>
+          Get expert guidance, training, and market support
+          from Devputra Agro.
+        </p>
+        <a href="contact.html">Get Guidance</a>
       </div>
 
     </div>
-    <div class="cta">
-      <h3>Want to Start Specialized Crop Farming?</h3>
-      <p>
-        Get expert guidance, training, and market support
-        from Devputra Agro.
-      </p>
-      <a href="contact.html">Get Guidance</a>
-    </div>
-
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="footer-container">
-
-    <div class="footer-brand">
-      <h3>Devputra<span>Agro</span></h3>
-      <p>Empowering villages through business, agriculture & community growth.</p>
-    </div>
-
-    <div class="footer-social">
-
-  <a href="https://www.facebook.com/devputragro/" target="_blank" aria-label="Facebook">
-    <i class="fab fa-facebook"></i>
-  </a>
-  <a href="https://www.instagram.com/devputragro/" target="_blank" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://twitter.com/Devputragro/" target="_blank" aria-label="Twitter">
-    <i class="fab fa-twitter"></i>
-  </a>
-
-  <a href="https://youtube.com/@Devputraindia" target="_blank" aria-label="YouTube">
-    <i class="fab fa-youtube"></i>
-  </a>
+  </section>
 
 </div>
-    <p class="footer-copy">© 2025 Devputra Agro — Empowering Rural India</p>
-  </div>
-</footer>
+
+<div id="footer"></div>
+
 <script>
-  const navLinks = document.querySelectorAll(".nav-links a");
-  const currentPage = window.location.pathname.split("/").pop();
 
-  navLinks.forEach(link => {
-    const linkPage = link.getAttribute("href");
+  fetch("nav.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
 
-    if (
-      linkPage === currentPage ||
-      (linkPage === "index.html" && currentPage === "")
-    ) {
-      link.classList.add("active");
-    }
-  });
+      document.querySelectorAll(".nav-links a").forEach(link => {
+        if (link.getAttribute("href") === "crops.html") {
+          link.classList.add("active");
+        }
+      });
+    });
+
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
 </script>
 
 </body>

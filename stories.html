@@ -1,95 +1,75 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Success Stories - Devputra Agro</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+
 
   <style>
     body {
-      font-family: "Poppins", sans-serif;
       margin: 0;
+      font-family: "Poppins", sans-serif;
       background: #ffffff;
       color: #1a1a1a;
     }
-    .glass-nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 15px 0;
-      background: rgba(255,255,255,0.9);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #eee;
-      z-index: 1000;
+    .page-offset {
+      margin-top: 90px;
     }
-    .nav-container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      font-size: 28px;
-      font-weight: 700;
-      color: #0a9396;
-    }
-    .logo span {
-      color: #003f3f;
-    }
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-    }
-    .nav-links a {
-      text-decoration: none;
-      font-weight: 500;
-      color: #003f3f;
-    }
+
     .stories-hero {
-      padding: 150px 20px 90px;
+      padding: 160px 20px 90px;
       text-align: center;
       background: linear-gradient(135deg, #0a9396, #94d2bd);
     }
+
     .stories-hero h2 {
       font-size: 42px;
       font-weight: 700;
       color: #003f3f;
     }
+
     .stories-hero p {
       font-size: 18px;
       max-width: 700px;
       margin: 15px auto 0;
       color: #083d3d;
     }
+
     .stories-section {
       padding: 90px 20px;
       background: #f6fefe;
     }
+
     .stories-container {
       max-width: 1200px;
       margin: auto;
       text-align: center;
     }
+
     .stories-title {
       font-size: 38px;
       font-weight: 700;
       color: #0a9396;
     }
+
     .stories-subtext {
       font-size: 18px;
       color: #444;
       max-width: 650px;
       margin: 10px auto 50px;
     }
+
     .stories-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
     }
+
     .story-card {
       background: white;
       border-radius: 18px;
@@ -98,28 +78,34 @@
       transition: 0.3s ease;
       text-align: left;
     }
+
     .story-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 12px 28px rgba(0,0,0,0.12);
     }
+
     .story-img {
       width: 100%;
       height: 220px;
       object-fit: cover;
     }
+
     .story-content {
       padding: 22px;
     }
+
     .story-content h3 {
       font-size: 22px;
       color: #003f3f;
       margin-bottom: 10px;
     }
+
     .story-content p {
       font-size: 16px;
       color: #444;
       line-height: 1.6;
     }
+
     .story-tag {
       display: inline-block;
       margin-top: 12px;
@@ -130,6 +116,7 @@
       border-radius: 20px;
       font-weight: 500;
     }
+
     .story-cta {
       margin-top: 70px;
       padding: 50px;
@@ -137,54 +124,20 @@
       border-radius: 18px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     }
+
     .story-cta h4 {
       font-size: 26px;
       color: #0a9396;
       margin-bottom: 10px;
     }
+
     .story-cta p {
       font-size: 16px;
       color: #444;
       max-width: 600px;
       margin: auto;
     }
-    footer{
-      background:#003f3f;
-      color:white;
-      text-align:center;
-      padding:35px 20px;
-      margin-top:80px;
-    }
-    footer p{
-      font-size:14px;
-      opacity:.9;
-    }
-    .footer-social {
-  display: flex;
-  justify-content: center;
-  gap: 22px;
-  margin-bottom: 25px;
-}
-.footer-social a {
-  color: white;
-  font-size: 24px;
-  transition: 0.3s ease;
-}
 
-.footer-social a:hover {
-  transform: translateY(-5px);
-  color: #e0fffb;
-}
-.nav-links a.active {
-  color: #0a9396;
-  font-weight: 700;
-}
-.nav-links a.active {
-  color: #003f3f;
-  font-weight: 700;
-  border-bottom: 3px solid #0a9396;
-  padding-bottom: 6px;
-}
     @media (max-width: 600px) {
       .stories-hero h2 {
         font-size: 30px;
@@ -198,134 +151,102 @@
     }
   </style>
 </head>
+
 <body>
-<nav class="glass-nav">
-  <div class="nav-container">
-    <div class="logo">Devputra<span>Agro</span></div>
-    <ul class="nav-links" id="navLinks">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="mission.html">Mission</a></li>
-  <li><a href="crops.html">Special Crops</a></li>
-  <li><a href="awards.html">Awards</a></li>
-  <li><a href="stories.html">Stories</a></li>
-  <li><a href="support.html">Support</a></li>
-  <li><a href="collaborators.html">Collaborators</a></li>
-  <li><a href="contact.html">Contact</a></li>
-  <li><a href="press.html">Press</a></li>
-</ul>
-  </div>
-</nav>
 
-<section class="stories-hero">
-  <h2>Success Stories</h2>
-  <p>
-    Real journeys of farmers and rural entrepreneurs who transformed
-    their lives with Devputra Agro.
-  </p>
-</section>
+<div id="navbar"></div>
 
-<section class="stories-section">
-  <div class="stories-container">
+<div class="page-offset">
 
-    <h3 class="stories-title">Lives We’ve Impacted</h3>
-    <p class="stories-subtext">
-      Every story reflects growth, courage, and a step towards rural self-reliance.
+  <section class="stories-hero">
+    <h2>Success Stories</h2>
+    <p>
+      Real journeys of farmers and rural entrepreneurs who transformed
+      their lives with Devputra Agro.
     </p>
+  </section>
 
-    <div class="stories-grid">
+  <section class="stories-section">
+    <div class="stories-container">
 
-      <div class="story-card">
-        <img src="./images/story1.jpg" class="story-img" alt="Farmer Success">
-        <div class="story-content">
-          <h3>Gurmeet Singh – Punjab</h3>
-          <p>
-            Shifted from wheat farming to Stevia cultivation.
-            His income increased by 40% within one year through proper crop planning
-            and guidance.
-          </p>
-          <span class="story-tag">Stevia Farming</span>
-        </div>
-      </div>
-
-      <div class="story-card">
-        <img src="./images/story2.jpeg" class="story-img" alt="Women Entrepreneur">
-        <div class="story-content">
-          <h3>Kavita Devi – Haryana</h3>
-          <p>
-            Started a dairy & handmade products unit after training.
-            Today she employs 5 local women and supplies across districts.
-          </p>
-          <span class="story-tag">Women Empowerment</span>
-        </div>
-      </div>
-
-      <div class="story-card">
-        <img src="./images/story3.jpg" class="story-img" alt="Farmer Training">
-        <div class="story-content">
-          <h3>Rakesh Kumar – Uttar Pradesh</h3>
-          <p>
-            Adopted turmeric and aloe vera farming using modern techniques,
-            reducing costs and improving yield significantly.
-          </p>
-          <span class="story-tag">Organic Farming</span>
-        </div>
-      </div>
-
-    </div>
-    <div class="story-cta">
-      <h4>Your Story Could Be Next</h4>
-      <p>
-        Join Devputra Agro and start your journey towards sustainable income,
-        better farming, and a stronger rural future.
+      <h3 class="stories-title">Lives We’ve Impacted</h3>
+      <p class="stories-subtext">
+        Every story reflects growth, courage, and a step towards rural self-reliance.
       </p>
+
+      <div class="stories-grid">
+
+        <div class="story-card">
+          <img src="./images/story1.jpg" class="story-img" alt="Farmer Success">
+          <div class="story-content">
+            <h3>Gurmeet Singh – Punjab</h3>
+            <p>
+              Shifted from wheat farming to Stevia cultivation.
+              His income increased by 40% within one year.
+            </p>
+            <span class="story-tag">Stevia Farming</span>
+          </div>
+        </div>
+
+        <div class="story-card">
+          <img src="./images/story2.jpeg" class="story-img" alt="Women Entrepreneur">
+          <div class="story-content">
+            <h3>Kavita Devi – Haryana</h3>
+            <p>
+              Started a dairy & handmade products unit after training,
+              employing 5 local women.
+            </p>
+            <span class="story-tag">Women Empowerment</span>
+          </div>
+        </div>
+
+        <div class="story-card">
+          <img src="./images/story3.jpg" class="story-img" alt="Farmer Training">
+          <div class="story-content">
+            <h3>Rakesh Kumar – Uttar Pradesh</h3>
+            <p>
+              Adopted turmeric and aloe vera farming using modern techniques,
+              improving yield and reducing costs.
+            </p>
+            <span class="story-tag">Organic Farming</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="story-cta">
+        <h4>Your Story Could Be Next</h4>
+        <p>
+          Join Devputra Agro and start your journey towards sustainable income
+          and a stronger rural future.
+        </p>
+      </div>
+
     </div>
-
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="footer-container">
-
-    <div class="footer-brand">
-      <h3>Devputra<span>Agro</span></h3>
-      <p>Empowering villages through business, agriculture & community growth.</p>
-    </div>
-
-    <div class="footer-social">
-
-  <a href="https://www.facebook.com/devputragro/" target="_blank" aria-label="Facebook">
-    <i class="fab fa-facebook"></i>
-  </a>
-  <a href="https://www.instagram.com/devputragro/" target="_blank" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://twitter.com/Devputragro/" target="_blank" aria-label="Twitter">
-    <i class="fab fa-twitter"></i>
-  </a>
-
-  <a href="https://youtube.com/@Devputraindia" target="_blank" aria-label="YouTube">
-    <i class="fab fa-youtube"></i>
-  </a>
+  </section>
 
 </div>
-    <p class="footer-copy">© 2025 Devputra Agro — Empowering Rural India</p>
-  </div>
-</footer>
+
+<div id="footer"></div>
+
 <script>
-  const navLinks = document.querySelectorAll(".nav-links a");
-  const currentPage = window.location.pathname.split("/").pop();
+  fetch("nav.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
 
-  navLinks.forEach(link => {
-    const linkPage = link.getAttribute("href");
+      document.querySelectorAll(".nav-links a").forEach(link => {
+        if (link.getAttribute("href") === "stories.html") {
+          link.classList.add("active");
+        }
+      });
+    });
 
-    if (
-      linkPage === currentPage ||
-      (linkPage === "index.html" && currentPage === "")
-    ) {
-      link.classList.add("active");
-    }
-  });
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
 </script>
 
 </body>

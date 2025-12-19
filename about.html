@@ -5,6 +5,8 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+
 
   <style>
     body{
@@ -212,10 +214,10 @@
 <div id="footer"></div>
 
 <script>
-  fetch("navbar.html")
+  fetch("nav.html")
     .then(res => res.text())
-    .then(html => {
-      document.getElementById("navbar").innerHTML = html;
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
 
       const current =
         window.location.pathname.split("/").pop() || "index.html";
@@ -228,8 +230,8 @@
     });
   fetch("footer.html")
     .then(res => res.text())
-    .then(html => {
-      document.getElementById("footer").innerHTML = html;
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
     });
 </script>
 </body>

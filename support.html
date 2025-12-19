@@ -1,10 +1,14 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Support Villagers - Devputra Agro</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+
 
   <style>
     body {
@@ -14,69 +18,44 @@
       color: #1a1a1a;
       line-height: 1.6;
     }
-    .nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #eee;
-      z-index: 1000;
+    .page-offset {
+      margin-top: 90px;
     }
-    .nav-container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      font-size: 26px;
-      font-weight: 700;
-      color: #0a9396;
-    }
-    .logo span {
-      color: #003f3f;
-    }
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 28px;
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: #003f3f;
-      font-weight: 500;
-    }
+
     .support-hero {
       padding: 160px 20px 90px;
       text-align: center;
       background: linear-gradient(135deg, #0a9396, #94d2bd);
     }
+
     .support-hero h1 {
       font-size: 44px;
       font-weight: 700;
       color: #003f3f;
     }
+
     .support-hero p {
       font-size: 18px;
       max-width: 720px;
       margin: 15px auto 0;
       color: #084b4b;
     }
+
     .section {
       padding: 90px 20px;
     }
+
     .container {
       max-width: 1200px;
       margin: auto;
     }
+
     .support-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 30px;
     }
+
     .support-card {
       background: #f6fefe;
       padding: 35px 30px;
@@ -85,24 +64,29 @@
       transition: 0.3s ease;
       text-align: center;
     }
+
     .support-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 12px 28px rgba(0,0,0,0.12);
     }
+
     .support-card i {
       font-size: 44px;
       color: #0a9396;
       margin-bottom: 15px;
     }
+
     .support-card h3 {
       font-size: 22px;
       color: #003f3f;
       margin-bottom: 10px;
     }
+
     .support-card p {
       font-size: 16px;
       color: #444;
     }
+
     .help {
       margin-top: 80px;
       background: #ffffff;
@@ -110,30 +94,36 @@
       border-radius: 20px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     }
+
     .help h2 {
       text-align: center;
       font-size: 36px;
       color: #0a9396;
       margin-bottom: 40px;
     }
+
     .help-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 25px;
     }
+
     .help-item {
       padding: 25px;
       background: #f6fefe;
       border-radius: 16px;
     }
+
     .help-item h4 {
       color: #003f3f;
       margin-bottom: 8px;
     }
+
     .help-item p {
       font-size: 15px;
       color: #555;
     }
+
     .cta {
       margin-top: 80px;
       padding: 70px 30px;
@@ -142,16 +132,19 @@
       text-align: center;
       border-radius: 20px;
     }
+
     .cta h3 {
       font-size: 32px;
       margin-bottom: 12px;
     }
+
     .cta p {
       font-size: 16px;
       max-width: 600px;
       margin: auto;
       opacity: 0.95;
     }
+
     .cta a {
       display: inline-block;
       margin-top: 25px;
@@ -163,46 +156,11 @@
       font-weight: 600;
       transition: 0.3s ease;
     }
+
     .cta a:hover {
       background: #005f5f;
       transform: translateY(-3px);
     }
-    footer {
-      background: #003f3f;
-      color: white;
-      text-align: center;
-      padding: 35px 20px;
-      margin-top: 80px;
-    }
-    footer p {
-      font-size: 14px;
-      opacity: 0.9;
-    }
-    .footer-social {
-  display: flex;
-  justify-content: center;
-  gap: 22px;
-  margin-bottom: 25px;
-}
-.footer-social a {
-  color: white;
-  font-size: 24px;
-  transition: 0.3s ease;
-}
-.footer-social a:hover {
-  transform: translateY(-5px);
-  color: #e0fffb;
-}
-.nav-links a.active {
-  color: #0a9396;
-  font-weight: 700;
-}
-.nav-links a.active {
-  color: #003f3f;
-  font-weight: 700;
-  border-bottom: 3px solid #0a9396;
-  padding-bottom: 6px;
-}
 
     @media (max-width: 600px) {
       .support-hero h1 {
@@ -219,135 +177,108 @@
 </head>
 
 <body>
-<nav class="nav">
-  <div class="nav-container">
-    <div class="logo">Devputra<span>Agro</span></div>
-    <ul class="nav-links" id="navLinks">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="mission.html">Mission</a></li>
-  <li><a href="crops.html">Special Crops</a></li>
-  <li><a href="awards.html">Awards</a></li>
-  <li><a href="stories.html">Stories</a></li>
-  <li><a href="support.html">Support</a></li>
-  <li><a href="collaborators.html">Collaborators</a></li>
-  <li><a href="contact.html">Contact</a></li>
-  <li><a href="press.html">Press</a></li>
-</ul>
-  </div>
-</nav>
+<div id="navbar"></div>
 
-<section class="support-hero">
-  <h1>Support Rural Communities</h1>
-  <p>
-    Your support helps farmers, women, and village youth gain access to
-    knowledge, training, and sustainable income opportunities.
-  </p>
-</section>
+<div class="page-offset">
 
-<section class="section">
-  <div class="container">
+  <section class="support-hero">
+    <h1>Support Rural Communities</h1>
+    <p>
+      Your support helps farmers, women, and village youth gain access to
+      knowledge, training, and sustainable income opportunities.
+    </p>
+  </section>
 
-    <div class="support-grid">
-      <div class="support-card">
-        <i class="fas fa-seedling"></i>
-        <h3>Agricultural Training</h3>
-        <p>Helping farmers adopt modern, organic, and high-value crop farming methods.</p>
-      </div>
+  <section class="section">
+    <div class="container">
 
-      <div class="support-card">
-        <i class="fas fa-tractor"></i>
-        <h3>Farm Guidance</h3>
-        <p>On-field support, crop planning, soil health, and irrigation solutions.</p>
-      </div>
-
-      <div class="support-card">
-        <i class="fas fa-lightbulb"></i>
-        <h3>Business Mentorship</h3>
-        <p>Guiding villagers to start small rural businesses and cooperatives.</p>
-      </div>
-
-      <div class="support-card">
-        <i class="fas fa-hand-holding-heart"></i>
-        <h3>Community Development</h3>
-        <p>Supporting women empowerment, youth skill development, and village growth.</p>
-      </div>
-    </div>
-
-    <div class="help">
-      <h2>How You Can Support</h2>
-
-      <div class="help-list">
-        <div class="help-item">
-          <h4>🌾 Become a Partner</h4>
-          <p>Collaborate with us to scale rural programs and farming initiatives.</p>
+      <div class="support-grid">
+        <div class="support-card">
+          <i class="fas fa-seedling"></i>
+          <h3>Agricultural Training</h3>
+          <p>Helping farmers adopt modern, organic, and high-value crop farming methods.</p>
         </div>
-        <div class="help-item">
-          <h4>📚 Share Knowledge</h4>
-          <p>Help villages by sharing expertise, tools, or training support.</p>
+
+        <div class="support-card">
+          <i class="fas fa-tractor"></i>
+          <h3>Farm Guidance</h3>
+          <p>On-field support, crop planning, soil health, and irrigation solutions.</p>
         </div>
-        <div class="help-item">
-          <h4>🤝 Sponsor Programs</h4>
-          <p>Support farmer training sessions, workshops, and demonstrations.</p>
+
+        <div class="support-card">
+          <i class="fas fa-lightbulb"></i>
+          <h3>Business Mentorship</h3>
+          <p>Guiding villagers to start small rural businesses and cooperatives.</p>
         </div>
-        <div class="help-item">
-          <h4>🌍 Spread Awareness</h4>
-          <p>Help us reach more people by sharing Devputra Agro’s mission.</p>
+
+        <div class="support-card">
+          <i class="fas fa-hand-holding-heart"></i>
+          <h3>Community Development</h3>
+          <p>Supporting women empowerment, youth skill development, and village growth.</p>
         </div>
       </div>
+
+      <div class="help">
+        <h2>How You Can Support</h2>
+
+        <div class="help-list">
+          <div class="help-item">
+            <h4>🌾 Become a Partner</h4>
+            <p>Collaborate with us to scale rural programs and farming initiatives.</p>
+          </div>
+
+          <div class="help-item">
+            <h4>📚 Share Knowledge</h4>
+            <p>Help villages by sharing expertise, tools, or training support.</p>
+          </div>
+
+          <div class="help-item">
+            <h4>🤝 Sponsor Programs</h4>
+            <p>Support farmer training sessions, workshops, and demonstrations.</p>
+          </div>
+
+          <div class="help-item">
+            <h4>🌍 Spread Awareness</h4>
+            <p>Help us reach more people by sharing Devputra Agro’s mission.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta">
+        <h3>Join Hands With Devputra Agro</h3>
+        <p>
+          Together, we can create sustainable livelihoods and empower rural India
+          for generations to come.
+        </p>
+        <a href="contact.html">Get Involved</a>
+      </div>
+
     </div>
-    <div class="cta">
-      <h3>Join Hands With Devputra Agro</h3>
-      <p>
-        Together, we can create sustainable livelihoods and empower rural India
-        for generations to come.
-      </p>
-      <a href="contact.html">Get Involved</a>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-brand">
-      <h3>Devputra<span>Agro</span></h3>
-      <p>Empowering villages through business, agriculture & community growth.</p>
-    </div>
-
-    <div class="footer-social">
-
-  <a href="https://www.facebook.com/devputragro/" target="_blank" aria-label="Facebook">
-    <i class="fab fa-facebook"></i>
-  </a>
-  <a href="https://www.instagram.com/devputragro/" target="_blank" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://twitter.com/Devputragro/" target="_blank" aria-label="Twitter">
-    <i class="fab fa-twitter"></i>
-  </a>
-
-  <a href="https://youtube.com/@Devputraindia" target="_blank" aria-label="YouTube">
-    <i class="fab fa-youtube"></i>
-  </a>
+  </section>
 
 </div>
-    <p class="footer-copy">© 2025 Devputra Agro — Empowering Rural India</p>
-  </div>
-</footer>
+
+<div id="footer"></div>
+
 <script>
-  const navLinks = document.querySelectorAll(".nav-links a");
-  const currentPage = window.location.pathname.split("/").pop();
+  fetch("nav.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
 
-  navLinks.forEach(link => {
-    const linkPage = link.getAttribute("href");
+      document.querySelectorAll(".nav-links a").forEach(link => {
+        if (link.getAttribute("href") === "support.html") {
+          link.classList.add("active");
+        }
+      });
+    });
 
-    if (
-      linkPage === currentPage ||
-      (linkPage === "index.html" && currentPage === "")
-    ) {
-      link.classList.add("active");
-    }
-  });
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
 </script>
+
 </body>
 </html>

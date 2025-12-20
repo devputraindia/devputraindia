@@ -571,56 +571,6 @@ section {
   background: #005f5f;
   transform: translateY(-3px);
 }
-.collab-section {
-  padding: 90px 20px;
-  background: #ffffff;
-  text-align: center;
-}
-
-.collab-title {
-  font-size: 42px;
-  font-weight: 700;
-  color: #0a9396;
-}
-.collab-subtext {
-  font-size: 18px;
-  color: #444;
-  max-width: 650px;
-  margin: 10px auto 45px;
-}
-.collab-slider {
-  overflow: hidden;
-  width: 100%;
-}
-.collab-track {
-  display: flex;
-  gap: 50px;
-  animation: scroll 22s linear infinite;
-}
-
-.collab-logo {
-  min-width: 160px;
-  height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: .3s ease;
-}
-
-.collab-logo img {
-  max-height: 70px;
-  width: auto;
-  object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.7;
-  transition: 0.3s;
-}
-
-.collab-logo:hover img {
-  filter: grayscale(0%);
-  opacity: 1;
-  transform: scale(1.08);
-}
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -678,63 +628,6 @@ section {
 .community-card p {
   font-size: 16px;
   color: #555;
-  line-height: 1.6;
-}
-.press {
-  padding: 100px 20px;
-  background: #f6fefe;
-}
-
-.press-container {
-  max-width: 1200px;
-  margin: auto;
-  text-align: center;
-}
-
-.press-title {
-  font-size: 42px;
-  font-weight: 700;
-  color: #0a9396;
-}
-
-.press-subtext {
-  font-size: 18px;
-  color: #555;
-  max-width: 650px;
-  margin: 10px auto 50px;
-}
-
-.press-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.press-card {
-  background: white;
-  padding: 30px;
-  border-radius: 18px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: 0.3s ease;
-  border-left: 6px solid #0a9396;
-}
-
-.press-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
-}
-
-.press-logo {
-  width: 150px;
-  margin: 0 auto 20px;
-  display: block;
-  opacity: 0.9;
-}
-
-.press-quote {
-  font-size: 16px;
-  color: #444;
-  font-style: italic;
   line-height: 1.6;
 }
 .awards-section {
@@ -815,22 +708,11 @@ section {
     max-height: 280px;
     object-fit: fill;
   }
-  {
-  .collab-title { font-size: 32px; }
-  .collab-subtext { font-size: 16px; }
-  .collab-logo { min-width: 120px; height: 70px; }
-  .collab-logo img { max-height: 55px; }
-}
+  
 {
   .community-title { font-size: 30px; }
   .community-subtext { font-size: 16px; }
   .community-card p { font-size: 15px; }
-}
- {
-  .press-title { font-size: 30px; }
-  .press-subtext { font-size: 16px; }
-  .press-quote { font-size: 15px; }
-  .press-logo { width: 120px; }
 }
   .awards-title {
     font-size: 32px;
@@ -904,7 +786,6 @@ section {
         padding: 12px 28px;
         font-size: 16px;
       }
-
       .card h3 {
         font-size: 20px;
       }
@@ -1234,41 +1115,6 @@ section {
 
   </div>
 </section>
-<section class="press reveal" id="press">
-  <div class="press-container">
-
-    <h2 class="press-title">Featured In Media</h2>
-    <p class="press-subtext">
-      Devputra Agro’s work has been recognized by respected media platforms for transforming rural development.
-    </p>
-
-    <div class="press-grid">
-
-      <div class="press-card">
-        <img src="./images/press1.png" alt="News Logo" class="press-logo">
-        <p class="press-quote">
-          “A growing movement empowering farmers with modern knowledge and sustainable agriculture.”
-        </p>
-      </div>
-
-      <div class="press-card">
-        <img src="./images/press2.png" alt="Media Logo" class="press-logo">
-        <p class="press-quote">
-          “Rural entrepreneurship is rising in North India, and Devputra Agro is playing a major role.”
-        </p>
-      </div>
-
-      <div class="press-card">
-        <img src="./images/press3.png" alt="Online Blog" class="press-logo">
-        <p class="press-quote">
-          “A powerful platform helping villagers create new opportunities and build sustainable income.”
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
   <section class="testimonials" id="testimonials">
   <h2 class="section-title">What Our Farmers Say</h2>
 
@@ -1289,27 +1135,6 @@ section {
       <p class="author">- Harpreet Singh</p>
     </div>
 
-  </div>
-</section>
-<section class="collab-section reveal" id="collaborators">
-  <h2 class="collab-title">Our Collaborators</h2>
-  <p class="collab-subtext">
-    Devputra Agro proudly partners with organizations that support rural development,
-    sustainable agriculture, and community empowerment.
-  </p>
-  <div class="collab-slider">
-    <div class="collab-track">
-      <div class="collab-logo"><img src="./images/partner1.png" alt="Partner Logo"></div>
-      <div class="collab-logo"><img src="./images/partner2.png" alt="Partner Logo"></div>
-      <div class="collab-logo"><img src="./images/partner3.png" alt="Partner Logo"></div>
-      <div class="collab-logo"><img src="./images/partner4.png" alt="Partner Logo"></div>
-      <div class="collab-logo"><img src="./images/partner5.png" alt="Partner Logo"></div>
-      <div class="collab-logo"><img src="./images/partner1.png" alt="Partner Logo"></div>
-      <div class="collab-logo"><img src="./images/partner2.png" alt="Partner Logo"></div>
-      <div class="collab-logo"><img src="./images/partner3.png" alt="Partner Logo"></div>
-      <div class="collab-logo"><img src="./images/partner4.png" alt="Partner Logo"></div>
-      <div class="collab-logo"><img src="./images/partner5.png" alt="Partner Logo"></div>
-    </div>
   </div>
 </section>
   <div id="footer"></div>
@@ -1346,6 +1171,7 @@ fetch("nav.html")
       });
     }
   });
+  
 fetch("footer.html")
   .then(res => res.text())
   .then(data => {

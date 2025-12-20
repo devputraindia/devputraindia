@@ -261,23 +261,47 @@
 <div id="footer"></div>
 
 <script>
-  fetch("nav.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("navbar").innerHTML = data;
+fetch("nav.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
 
-      document.querySelectorAll(".nav-links a").forEach(link => {
-        if (link.getAttribute("href") === "support.html") {
-          link.classList.add("active");
-        }
+    const current =
+      window.location.pathname.split("/").pop() || "index.html";
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      if (link.getAttribute("href") === current) {
+        link.classList.add("active");
+      }
+    });
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    if (!hamburger || !navLinks) return;
+
+    hamburger.addEventListener("click", function (e) {
+      e.stopPropagation();
+      navLinks.classList.toggle("open");
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+        navLinks.classList.remove("open");
+      }
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
       });
     });
-
-  fetch("footer.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("footer").innerHTML = data;
-    });
+  });
+fetch("footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+  
 </script>
 
 </body>

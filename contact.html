@@ -204,14 +204,15 @@ fetch("nav.html")
   .then(data => {
     document.getElementById("navbar").innerHTML = data;
 
-    const current =
+    const currentPage =
       window.location.pathname.split("/").pop() || "index.html";
 
     document.querySelectorAll(".nav-links a").forEach(link => {
-      if (link.getAttribute("href") === current) {
+      if (link.getAttribute("href") === currentPage) {
         link.classList.add("active");
       }
     });
+
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("navLinks");
 
@@ -220,21 +221,28 @@ fetch("nav.html")
     hamburger.addEventListener("click", function (e) {
       e.stopPropagation();
       navLinks.classList.toggle("open");
-    });
-
-    document.addEventListener("click", function (e) {
-      if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-        navLinks.classList.remove("open");
-      }
+      document.body.classList.toggle("menu-open"); // disable background scroll
     });
 
     document.querySelectorAll(".nav-links a").forEach(link => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("open");
+        document.body.classList.remove("menu-open");
       });
     });
+
+    document.addEventListener("click", function (e) {
+      if (
+        navLinks.classList.contains("open") &&
+        !navLinks.contains(e.target) &&
+        !hamburger.contains(e.target)
+      ) {
+        navLinks.classList.remove("open");
+        document.body.classList.remove("menu-open");
+      }
+    });
   });
-  
+
 fetch("footer.html")
   .then(res => res.text())
   .then(data => {

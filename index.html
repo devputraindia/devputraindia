@@ -774,8 +774,15 @@ section {
   .faq-title { font-size: 32px; }
 }
       .hero {
-        padding: 120px 20px 70px;
-      }
+  min-height: calc(100vh - 72px);
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #0a9396, #94d2bd);
+}
+
       .hero h2 {
         font-size: 32px;
       }
